@@ -413,7 +413,10 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
 .send-btn .si { width: 46px; height: 46px; border-radius: 999px; display: grid; place-items: center; color: #fff; }
 .send-btn strong { font-size: .95rem; }
 .send-btn span { font-size: 11.5px; color: var(--ink-soft); }
-.step-nav { display: flex; justify-content: space-between; gap: 12px; margin-top: 26px; }
+.step-nav { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 26px; }
+.clear-link { background: none; border: none; cursor: pointer; font-family: inherit; font-size: 13px; font-weight: 600; color: var(--ink-soft); text-decoration: underline; text-underline-offset: 3px; padding: 8px 4px; transition: color .2s; }
+.clear-link:hover { color: #D9376A; }
+.s-cleaner-note { font-size: 11px; color: var(--ink-soft); margin-top: 10px; text-align: right; }
 .summary-card { position: sticky; top: 100px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
 .sc-head { background: var(--moss); color: #fff; padding: 16px 22px; font-weight: 700; font-size: .95rem; }
 .sc-body { padding: 20px 22px; display: grid; gap: 9px; }
@@ -803,15 +806,15 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
         <span class="cat">Renovations</span>
         <h3>After Builders</h3>
         <p>Dust, debris and paint splashes gone — renovation-ready to enjoy.</p>
-        <div class="pr">£25.00 <small>/hour</small></div>
-        <div class="min">Min 6 hours · from £150</div>
+        <div class="pr">£130 <small>fixed, from</small></div>
+        <div class="min">Fixed price by property size</div>
         <div class="card-foot"><a class="book-link" href="#book" data-svc="builders">Book <span class="arr">→</span></a><a class="more-arrow" href="#/service/builders" aria-label="Learn more about after builders cleaning" title="Learn more"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
       </div>
       <div class="svc-card">
         <span class="cat">Deep clean</span>
         <h3>Spring Cleaning</h3>
         <p>A top-to-bottom seasonal refresh — cupboards, skirting and detail work.</p>
-        <div class="pr">£22.50 <small>/hour</small></div>
+        <div class="pr">£25.00 <small>/hour</small></div>
         <div class="min">Min 4 hours · from £100</div>
         <div class="card-foot"><a class="book-link" href="#book" data-svc="spring">Book <span class="arr">→</span></a><a class="more-arrow" href="#/service/spring" aria-label="Learn more about spring cleaning" title="Learn more"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
       </div>
@@ -819,7 +822,7 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
         <span class="cat">One visit</span>
         <h3>One-Off Cleaning</h3>
         <p>Before guests, after projects — one visit, total transformation.</p>
-        <div class="pr">£22.50 <small>/hour</small></div>
+        <div class="pr">£25.00 <small>/hour</small></div>
         <div class="min">Min 4 hours · from £100</div>
         <div class="card-foot"><a class="book-link" href="#book" data-svc="oneoff">Book <span class="arr">→</span></a><a class="more-arrow" href="#/service/oneoff" aria-label="Learn more about one-off cleaning" title="Learn more"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
       </div>
@@ -887,18 +890,18 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
     <div class="rate-list rise">
       <div class="rate-row"><div class="svc">Domestic cleaning<small>Regular weekly, fortnightly or monthly</small></div><div class="rate">From £22.50 /hr</div><div class="minc">Minimum £45 per visit</div><a class="btn btn-line" href="#book" data-svc="domestic">Book</a></div>
       <div class="rate-row"><div class="svc">Office cleaning<small>Commercial &amp; out-of-hours</small></div><div class="rate">From £25.00 /hr</div><div class="minc">Minimum £50 per visit</div><a class="btn btn-line" href="#book" data-svc="office">Book</a></div>
-      <div class="rate-row"><div class="svc">Spring cleaning<small>Seasonal deep refresh</small></div><div class="rate">From £22.50 /hr</div><div class="minc">Min 4 hours · from £100</div><a class="btn btn-line" href="#book" data-svc="spring">Book</a></div>
-      <div class="rate-row"><div class="svc">One-off cleaning<small>Single-visit deep clean</small></div><div class="rate">From £22.50 /hr</div><div class="minc">Min 4 hours · from £100</div><a class="btn btn-line" href="#book" data-svc="oneoff">Book</a></div>
-      <div class="rate-row"><div class="svc">After builders<small>Post-renovation clean-up</small></div><div class="rate">From £25.00 /hr</div><div class="minc">Min 6 hours · from £150</div><a class="btn btn-line" href="#book" data-svc="builders">Book</a></div>
+      <div class="rate-row"><div class="svc">Spring cleaning<small>Seasonal deep refresh</small></div><div class="rate">From £25.00 /hr</div><div class="minc">Min 4 hours · from £100</div><a class="btn btn-line" href="#book" data-svc="spring">Book</a></div>
+      <div class="rate-row"><div class="svc">One-off cleaning<small>Single-visit deep clean</small></div><div class="rate">From £25.00 /hr</div><div class="minc">Min 4 hours · from £100</div><a class="btn btn-line" href="#book" data-svc="oneoff">Book</a></div>
+      <div class="rate-row"><div class="svc">After builders<small>Post-renovation clean-up</small></div><div class="rate">Fixed from £130</div><div class="minc">Priced by property size — see table below</div><a class="btn btn-line" href="#book" data-svc="builders">Book</a></div>
       <div class="rate-row"><div class="svc">After party<small>Morning-after rescue</small></div><div class="rate">From £25.00 /hr</div><div class="minc">Min 4 hours · from £100</div><a class="btn btn-line" href="#book" data-svc="party">Book</a></div>
       <div class="rate-row"><div class="svc">Emergency cleaning<small>Same-day response</small></div><div class="rate">From £30.00 /hr</div><div class="minc">Minimum £120 per visit</div><a class="btn btn-line" href="#book" data-svc="emergency">Book</a></div>
     </div>
-    <p class="small-note">Hourly services exclude professional window, carpet and upholstery cleaning — ask us for a quote.</p>
+    <p class="small-note"><strong>All prices are for one professional cleaner.</strong> Hourly services exclude professional window, carpet and upholstery cleaning — ask us for a quote.</p>
 
     <div class="eot-wrap rise">
       <div class="section-head" style="margin-bottom:30px">
         <span class="eyebrow">Fixed prices</span>
-        <h2 style="font-size:clamp(1.5rem,3vw,2rem)">End of tenancy cleaning</h2>
+        <h2 style="font-size:clamp(1.5rem,3vw,2rem)">End of tenancy &amp; after builders cleaning</h2>
       </div>
       <div style="overflow-x:auto">
         <table class="eot-table">
@@ -912,7 +915,7 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
           </tbody>
         </table>
       </div>
-      <p class="small-note">All end of tenancy cleans are checklist-driven with a deposit-back focus. Four-bedroom+ homes are quoted individually — <a href="#contact">get in touch</a>.</p>
+      <p class="small-note">These fixed prices apply to both end of tenancy and after builders cleans, and are for one professional cleaner. End of tenancy cleans are checklist-driven with a deposit-back focus. Four-bedroom+ homes are quoted individually — <a href="#contact">get in touch</a>.</p>
     </div>
   </div>
 </section>
@@ -1029,6 +1032,8 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
               <button type="button" id="send-email" class="alt-link">Email</button>
               <span>·</span>
               <button type="button" id="send-wa" class="alt-link">WhatsApp</button>
+              <span>·</span>
+              <button type="button" id="clear-form-2" class="alt-link">Clear form &amp; start again</button>
             </div>
           </div>
           <div id="success-pane" style="display:none">
@@ -1056,6 +1061,7 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
 
         <div class="step-nav">
           <button type="button" class="btn btn-line" id="nav-back" style="visibility:hidden">← Back</button>
+          <button type="button" class="clear-link" id="clear-form">↺ Clear form</button>
           <button type="button" class="btn btn-solid" id="nav-next">Continue <span class="arr">→</span></button>
         </div>
       </div>
@@ -1073,6 +1079,7 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
             <div><div class="lbl">Estimated total</div><div class="note" id="s-min-note"></div></div>
             <div class="amt" id="s-total">£67.50</div>
           </div>
+          <div class="s-cleaner-note">Prices are for one professional cleaner</div>
         </div>
       </aside>
     </div>
@@ -1298,9 +1305,9 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
   const SERVICES = {
     domestic:  { name: 'Domestic cleaning',  rate: 22.5, min: 45,  minH: 2 },
     office:    { name: 'Office cleaning',    rate: 25,   min: 50,  minH: 2 },
-    spring:    { name: 'Spring cleaning',    rate: 22.5, min: 100, minH: 4 },
-    oneoff:    { name: 'One-off cleaning',   rate: 22.5, min: 100, minH: 4 },
-    builders:  { name: 'After builders',     rate: 25,   min: 150, minH: 6 },
+    spring:    { name: 'Spring cleaning',    rate: 25,   min: 100, minH: 4 },
+    oneoff:    { name: 'One-off cleaning',   rate: 25,   min: 100, minH: 4 },
+    builders:  { name: 'After builders',     fixed: true },
     party:     { name: 'After party clean',  rate: 25,   min: 100, minH: 4 },
     emergency: { name: 'Emergency cleaning', rate: 30,   min: 120, minH: 4 },
     eot:       { name: 'End of tenancy',     fixed: true }
@@ -1568,7 +1575,7 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
     b.type = 'button'; b.className = 'svc-opt' + (id === state.service ? ' sel' : '');
     b.dataset.id = id;
     b.innerHTML = '<span class="n">' + s.name + '</span>' +
-      (s.fixed ? '<span class="r">Fixed price from £130</span><span class="m">Deposit-back deep clean</span>'
+      (s.fixed ? '<span class="r">Fixed price from £130</span><span class="m">' + (id === 'eot' ? 'Deposit-back deep clean' : 'Priced by property size') + '</span>'
                : '<span class="r">From £' + s.rate.toFixed(2) + '/hr</span><span class="m">Minimum £' + s.min + ' per visit</span>');
     b.addEventListener('click', () => selectService(id));
     grid.appendChild(b);
@@ -1763,6 +1770,24 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
     document.querySelectorAll('.slot').forEach(x => x.classList.remove('sel'));
     buildDates(); refresh(); showStep(1);
   });
+  function clearForm() {
+    state.service = 'domestic'; state.hours = 3; state.freq = 'One-off';
+    state.beds = 'studio'; state.carpet = 'no'; state.extras = [];
+    state.date = null; state.time = null; state.weekOffset = 0;
+    grid.querySelectorAll('.svc-opt').forEach(x => x.classList.toggle('sel', x.dataset.id === 'domestic'));
+    document.querySelectorAll('#extras-list input').forEach(i => i.checked = false);
+    const resetChips = (rowId, v) => $(rowId).querySelectorAll('.chip').forEach(c => c.classList.toggle('sel', c.dataset.v === v));
+    resetChips('freq-row', 'One-off'); resetChips('beds-row', 'studio'); resetChips('carpet-row', 'no');
+    ['f-name', 'f-phone', 'f-email', 'f-address', 'f-postcode', 'f-notes'].forEach(id => { const el = $(id); el.value = ''; el.style.borderColor = ''; });
+    $('f-access').selectedIndex = 0;
+    document.querySelectorAll('.slot').forEach(x => x.classList.remove('sel'));
+    $('success-pane').style.display = 'none';
+    $('confirm-pane').style.display = 'block';
+    buildDates(); refresh(); showStep(1);
+    window.ugToast('Form cleared — start fresh whenever you\'re ready');
+  }
+  $('clear-form').addEventListener('click', clearForm);
+  $('clear-form-2').addEventListener('click', clearForm);
   $('confirm-booking').addEventListener('click', async () => {
     const btn = $('confirm-booking'), status = $('send-status');
     currentRef = makeRef();
@@ -1935,9 +1960,9 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
         '<strong>We remove paint splashes, adhesive marks and labels</strong> from glass, tiles and fittings, degrease new kitchens, and polish every surface — turning a building site back into a home.'],
       includes: ['All surfaces damp-wiped to trap fine dust', 'HEPA vacuuming of floors, corners & vents', 'Paint splashes & sticker residue removed', 'Windows, frames & tracks cleaned inside', 'New kitchens degreased & polished', 'Bathrooms de-dusted & sanitised', 'Inside cupboards & wardrobes', 'Skirting, doors, rails & sockets wiped', 'Light fittings & switches dusted', 'Debris bagged & removed to your bins'],
       perfect: ['Post-renovation homes', 'New extensions & lofts', 'Refurbished rentals', 'Developers & builders handing over'],
-      rows: [['Hourly rate', 'From £25.00/hr per cleaner'], ['Minimum visit', '6 hours · from £150'], ['Equipment', 'HEPA vacuums & pro kit included'], ['Team size', 'Scaled to your project'], ['Availability', '7 days a week']],
+      rows: [['Studio flat', 'From £130 / £170 with carpets'], ['One bedroom', 'From £150 / £190 with carpets'], ['Two bedroom', 'From £220 / £280 with carpets'], ['Three bedroom', 'From £350 / £450 with carpets'], ['Four+ bedroom', 'Individual quote'], ['Equipment', 'HEPA vacuums & pro kit included'], ['Availability', '7 days a week']],
       faqs: [['When should I book — right after the builders leave?', 'Give it a day or two if you can: fine dust keeps settling for 24–48 hours after work ends, so a slightly later clean lasts longer.'], ['Do you take away rubble?', 'We bag and remove cleaning debris to your bins. Rubble and building waste removal is the builder\'s job — but we\'ll happily deal with the dust they left behind.']],
-      note: 'For larger renovations we may recommend two passes — a first clean after the trades finish, and a lighter polish once the final snagging is done.'
+      note: 'Fixed prices by property size — the same clear pricing as our end of tenancy cleans. For larger renovations we may recommend two passes — a first clean after the trades finish, and a lighter polish once the final snagging is done.'
     },
     spring: {
       cat: 'Deep clean · Seasonal', h: 'The big clean every home <span class="accent">deserves.</span>',
@@ -1946,7 +1971,7 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
         '<strong>All with non-toxic, biodegradable products</strong> — so the "freshly cleaned" feeling is actually fresh air, not chemical fumes.'],
       includes: ['Everything in a regular clean, deeper', 'Inside kitchen cupboards & drawers', 'Under & behind furniture (where movable)', 'Skirting boards, picture rails & door frames', 'Tiles & grout scrubbed', 'Limescale removed from bathrooms', 'Interior windows & sills', 'Light fittings, switches & sockets', 'Radiators & vents dusted', 'Upholstery & mattresses vacuumed'],
       perfect: ['Annual spring resets', 'Before hosting family', 'After winter hibernation', 'Homes between regular cleaners'],
-      rows: [['Hourly rate', 'From £22.50/hr per cleaner'], ['Minimum visit', '4 hours · from £100'], ['Products & equipment', 'Included — eco as standard'], ['Availability', '7 days a week'], ['Excludes', 'Pro window/carpet/upholstery cleaning']],
+      rows: [['Hourly rate', 'From £25.00/hr per cleaner'], ['Minimum visit', '4 hours · from £100'], ['Products & equipment', 'Included — eco as standard'], ['Availability', '7 days a week'], ['Excludes', 'Pro window/carpet/upholstery cleaning']],
       faqs: [['How long does a spring clean take?', 'Most homes take 4–8 hours depending on size and condition — we\'ll recommend the right duration when you book.'], ['Is it just for spring?', 'Not at all — it\'s our name for a full seasonal deep clean, available year-round.']],
       note: 'Pair a spring clean with a new regular cleaning schedule and your home starts from a perfect baseline.'
     },
@@ -1957,7 +1982,7 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
         '<strong>You set the priorities:</strong> tell us what matters — the kitchen before a dinner party, the bathroom before in-laws, the whole flat before a landlord inspection — and we\'ll build the visit around it.'],
       includes: ['Whole-home clean, top to bottom', 'Kitchen degreased: hob, worktops, sink & fronts', 'Bathrooms descaled & sanitised', 'All floors vacuumed & mopped', 'Dusting including skirting & ledges', 'Mirrors & internal glass polished', 'Beds made, living areas reset', 'Bins emptied & liners replaced', 'Your priority list tackled first', 'Optional extras: oven, fridge, windows'],
       perfect: ['Before & after guests', 'Landlord inspections', 'Post-party recovery', 'A fresh start, any reason'],
-      rows: [['Hourly rate', 'From £22.50/hr per cleaner'], ['Minimum visit', '4 hours · from £100'], ['Products & equipment', 'Included — eco as standard'], ['Booking', 'Online in 2 minutes'], ['Excludes', 'Pro window/carpet/upholstery cleaning']],
+      rows: [['Hourly rate', 'From £25.00/hr per cleaner'], ['Minimum visit', '4 hours · from £100'], ['Products & equipment', 'Included — eco as standard'], ['Booking', 'Online in 2 minutes'], ['Excludes', 'Pro window/carpet/upholstery cleaning']],
       faqs: [['What\'s the difference vs a spring clean?', 'They\'re close cousins — a spring clean is our most thorough seasonal reset; a one-off is flexible around your priorities. Both start at the same rate.'], ['Can I get it done this week?', 'Usually yes — we\'re available 7 days a week and can often visit within a day or two.']],
       note: 'If you love the result, switching to a regular schedule keeps your home at this standard for less time and money.'
     },
@@ -1993,9 +2018,10 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
     const d = SERVICE_PAGES[id];
     const s = SERVICES[id];
     if (!d) return false;
-    const priceHead = s.fixed
+    const priceHead = (s.fixed
       ? '<div class="from">Fixed prices</div><div class="amt">£130 <small>from</small></div>'
-      : '<div class="from">From</div><div class="amt">£' + s.rate.toFixed(2) + ' <small>/hour</small></div>';
+      : '<div class="from">From</div><div class="amt">£' + s.rate.toFixed(2) + ' <small>/hour</small></div>')
+      + '<div class="from" style="margin-top:6px;text-transform:none;letter-spacing:0">Price for one professional cleaner</div>';
     serviceView.innerHTML =
       '<section class="sp-hero"><div class="container">' +
       '<a class="sp-back" href="#services">← All services</a>' +
