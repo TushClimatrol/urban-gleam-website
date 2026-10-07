@@ -1,80 +1,1187 @@
 {
-  "sunbury-on-thames": {"name": "Sunbury-on-Thames", "pc": "TW16", "near": ["shepperton", "staines", "hounslow", "walton-on-thames"],
-    "blurb": "Sunbury-on-Thames is home — our office is on Kings Avenue, TW16 — so we know every road from Upper Halliford and Charlton to Lower Sunbury and the riverside. Being local means short travel times, same-day availability when you need it and a team that's often already cleaning nearby.",
-    "homes": "riverside homes, 1930s semis and the newer developments around Sunbury Cross"},
-  "shepperton": {"name": "Shepperton", "pc": "TW17", "near": ["sunbury-on-thames", "walton-on-thames", "staines", "weybridge"],
-    "blurb": "Shepperton is a five-minute drive from our Sunbury base, so we cover Shepperton Green, Upper Halliford, Laleham Road and the village end by the river with the same local team every time.",
-    "homes": "detached family homes, bungalows and riverside properties"},
-  "staines": {"name": "Staines-upon-Thames", "pc": "TW18 & TW19", "near": ["sunbury-on-thames", "shepperton", "hounslow", "twickenham"],
-    "blurb": "From the town centre and Two Rivers to Laleham, Stanwell and Ashford, Staines-upon-Thames is one of our busiest areas — close to our Sunbury-on-Thames base and well served for regular domestic cleans, end of tenancy cleans and office cleaning near the business parks.",
-    "homes": "town-centre apartments, terraced houses and family homes in Laleham and Ashford"},
-  "walton-on-thames": {"name": "Walton-on-Thames", "pc": "KT12", "near": ["weybridge", "esher", "sunbury-on-thames", "shepperton"],
-    "blurb": "Just across the river from our Sunbury base, Walton-on-Thames — including Hersham, Ashley Park and the riverside around Walton Bridge — is covered by our nearest team, so short-notice and same-day bookings are usually possible.",
-    "homes": "large detached houses in Ashley Park, family semis and new-build apartments near the station"},
-  "weybridge": {"name": "Weybridge", "pc": "KT13", "near": ["walton-on-thames", "esher", "shepperton", "staines"],
-    "blurb": "Weybridge, St George's Hill, Oatlands and Brooklands are all within our core Surrey patch. Larger homes here often book a regular weekly cleaner plus a seasonal deep clean, and we're used to working discreetly around busy households.",
-    "homes": "large family homes, St George's Hill estates and apartments around Brooklands"},
-  "esher": {"name": "Esher", "pc": "KT10", "near": ["walton-on-thames", "weybridge", "surbiton", "kingston"],
-    "blurb": "Esher, Claygate and Hinchley Wood sit at the edge of our Surrey coverage, reached in around 20 minutes from Sunbury. We provide regular home cleaning, one-off deep cleans and end of tenancy cleans for tenants moving out of properties across the KT10 area.",
-    "homes": "period houses, detached family homes and rental properties"},
-  "hounslow": {"name": "Hounslow", "pc": "TW3, TW4 & TW5", "near": ["twickenham", "staines", "ealing", "chiswick"],
-    "blurb": "Hounslow, Isleworth, Heston, Cranford and Osterley are all a short drive up the A316 from our base. We clean a lot of rental flats and shared houses here, plus offices and units around Heathrow and the Great West Road.",
-    "homes": "flats, Victorian terraces and rental properties near Heathrow"},
-  "twickenham": {"name": "Twickenham", "pc": "TW1 & TW2", "near": ["teddington", "richmond", "hounslow", "kingston"],
-    "blurb": "Twickenham, St Margarets, Strawberry Hill and Whitton are all covered by our TW team. Match days at the stadium mean a spike in after-party and one-off cleans — book ahead if you're hosting.",
-    "homes": "Victorian and Edwardian terraces, riverside flats and family homes in Strawberry Hill"},
-  "teddington": {"name": "Teddington", "pc": "TW11", "near": ["twickenham", "kingston", "richmond", "surbiton"],
-    "blurb": "Teddington, Hampton Wick and the streets around Bushy Park are among our most requested areas for regular weekly and fortnightly home cleaning — you'll see the same trusted cleaner every visit.",
-    "homes": "family houses near Bushy Park, period cottages and flats by Teddington Lock"},
-  "kingston": {"name": "Kingston upon Thames", "pc": "KT1 & KT2", "near": ["surbiton", "teddington", "wimbledon", "esher"],
-    "blurb": "From the town centre and Norbiton to Coombe and Kingston Hill, we cover the whole of Kingston upon Thames for homes, student lets, HMOs and offices. End of tenancy cleans are especially popular here at the end of the academic year.",
-    "homes": "town-centre apartments, student houses and larger homes on Kingston Hill"},
-  "surbiton": {"name": "Surbiton", "pc": "KT5 & KT6", "near": ["kingston", "esher", "epsom", "teddington"],
-    "blurb": "Surbiton, Berrylands, Tolworth and Long Ditton are covered by the same team that looks after Kingston — ideal for commuters who want their home cleaned while they're at work.",
-    "homes": "mansion flats, Victorian villas and family semis in Berrylands"},
-  "richmond": {"name": "Richmond", "pc": "TW9 & TW10", "near": ["kew", "twickenham", "barnes", "teddington"],
-    "blurb": "Richmond, Richmond Hill, Ham and Petersham deserve a cleaner who takes care with period features — our Richmond team is used to Georgian townhouses, listed interiors and riverside apartments alike.",
-    "homes": "Georgian townhouses, riverside apartments and family homes in Ham"},
-  "kew": {"name": "Kew", "pc": "TW9", "near": ["richmond", "chiswick", "barnes", "hounslow"],
-    "blurb": "Kew, Kew Green and North Sheen are covered by our Richmond team. Most Kew customers book a regular fortnightly clean, often adding an oven or interior-window extra before the holidays.",
-    "homes": "Victorian terraces, garden flats and family houses near Kew Gardens"},
-  "chiswick": {"name": "Chiswick", "pc": "W4", "near": ["hammersmith", "kew", "ealing", "barnes"],
-    "blurb": "Chiswick, Turnham Green, Bedford Park, Grove Park and Strand-on-the-Green are all on our west London round. We look after everything from mansion-block flats to large family houses off Chiswick High Road.",
-    "homes": "Bedford Park villas, mansion flats and family houses in Grove Park"},
-  "ealing": {"name": "Ealing", "pc": "W5 & W13", "near": ["chiswick", "hammersmith", "hounslow", "kew"],
-    "blurb": "Ealing Broadway, Ealing Common, West Ealing, Hanwell and Northfields are covered by our west London team, with regular domestic cleaning, end of tenancy cleans for the area's many rentals and office cleaning around the Broadway.",
-    "homes": "Edwardian houses, converted flats and new apartments near Ealing Broadway"},
-  "hammersmith": {"name": "Hammersmith", "pc": "W6", "near": ["fulham", "chiswick", "chelsea", "barnes"],
-    "blurb": "Hammersmith, Brook Green, Ravenscourt Park and the riverside along Lower Mall are covered daily. We clean a lot of shared flats and rental properties here as well as offices around Hammersmith Broadway.",
-    "homes": "flats above shops, Victorian terraces and offices around the Broadway"},
-  "fulham": {"name": "Fulham", "pc": "SW6", "near": ["chelsea", "hammersmith", "putney", "battersea"],
-    "blurb": "Fulham, Parsons Green, Fulham Broadway and Sands End are some of our busiest London postcodes for regular weekly cleaning — busy professionals and young families who want the same reliable cleaner every visit.",
-    "homes": "Victorian terraces, mansion flats and new riverside developments"},
-  "chelsea": {"name": "Chelsea", "pc": "SW3 & SW10", "near": ["fulham", "battersea", "hammersmith", "clapham"],
-    "blurb": "Chelsea, the King's Road, World's End and Chelsea Harbour are covered by our central London team. Expect discreet, meticulous cleaners who are comfortable in high-value homes and used to working with concierges and key safes.",
-    "homes": "period townhouses, mansion-block apartments and Chelsea Harbour flats"},
-  "battersea": {"name": "Battersea", "pc": "SW11", "near": ["clapham", "chelsea", "fulham", "putney"],
-    "blurb": "Battersea, Nine Elms, Northcote Road and the streets around Battersea Park — including the new Power Station developments — are on our south-west London round for regular cleans, move-in/move-out cleans and after-builders cleans.",
-    "homes": "new-build apartments in Nine Elms, Victorian terraces off Northcote Road and mansion flats by the park"},
-  "clapham": {"name": "Clapham", "pc": "SW4", "near": ["battersea", "wimbledon", "putney", "croydon"],
-    "blurb": "Clapham Common, Clapham Old Town, Abbeville Village and Clapham North are covered by our SW team. With so many shared flats and rentals, end of tenancy cleans and one-off deep cleans are in constant demand here.",
-    "homes": "period conversions, shared flats and family homes in Abbeville Village"},
-  "putney": {"name": "Putney", "pc": "SW15", "near": ["wimbledon", "fulham", "barnes", "battersea"],
-    "blurb": "Putney, Putney Heath, Roehampton and the riverside embankment are all covered by our south-west London team — regular home cleaning, after-builders cleans for the area's many renovations and end of tenancy cleans.",
-    "homes": "mansion flats, family houses on the heath and Roehampton estates"},
-  "barnes": {"name": "Barnes", "pc": "SW13", "near": ["putney", "richmond", "kew", "hammersmith"],
-    "blurb": "Barnes Village, Castelnau, the Pond and Mortlake are covered on our Richmond-Putney route. Barnes customers tend to book a regular weekly clean plus a big spring clean each year.",
-    "homes": "Georgian and Victorian village houses, riverside homes and family flats"},
-  "wimbledon": {"name": "Wimbledon", "pc": "SW19", "near": ["putney", "kingston", "clapham", "sutton"],
-    "blurb": "Wimbledon Village, Wimbledon Park, Southfields and South Wimbledon are all covered. Tennis fortnight brings a rush of short-let turnovers and after-party cleans — book early if you're hosting or letting.",
-    "homes": "large houses in the Village, Edwardian terraces and modern apartments near the station"},
-  "sutton": {"name": "Sutton", "pc": "SM1 & SM2", "near": ["epsom", "croydon", "wimbledon", "surbiton"],
-    "blurb": "Sutton, Cheam, Carshalton and Belmont are covered by our south London team, with regular domestic cleaning, end of tenancy cleans and office cleaning around the town centre.",
-    "homes": "1930s semis, family houses in Cheam and flats around Sutton town centre"},
-  "epsom": {"name": "Epsom", "pc": "KT17, KT18 & KT19", "near": ["sutton", "surbiton", "esher", "kingston"],
-    "blurb": "Epsom, Ewell, Epsom Downs and Stoneleigh are within our Surrey coverage. We handle a lot of larger family homes here — regular cleans, seasonal deep cleans and after-builders cleans following extensions and loft conversions.",
-    "homes": "detached family homes, period houses in Ewell village and new developments near the hospital cluster"},
-  "croydon": {"name": "Croydon", "pc": "CR0", "near": ["sutton", "clapham", "wimbledon", "epsom"],
-    "blurb": "East Croydon, South Croydon, Addiscombe and the Purley Way area are covered by our south London team — from new-build apartments near the station to family houses and offices in the town centre.",
-    "homes": "new-build apartments, Victorian terraces and offices around East Croydon"}
+ "_comment": "One entry per area page (/areas/<slug>/). Edit here, then run: python3 tools/build-seo.py. 'near' lists other area slugs; 'focus' picks the three services to feature (ids: domestic, office, eot, builders, spring, oneoff, party, emergency) with a sentence each; {hours} is replaced with the opening hours set in tools/build-seo.py. Keep every statement true for the business.",
+ "groups": [
+  {
+   "name": "Spelthorne & Runnymede",
+   "intro": "Our home patch in north Surrey — the towns closest to our Sunbury-on-Thames office."
+  },
+  {
+   "name": "Elmbridge & Epsom",
+   "intro": "Across the river into Elmbridge and south to Epsom and Ewell."
+  },
+  {
+   "name": "Kingston & Richmond upon Thames",
+   "intro": "Along the Thames through the royal borough of Kingston and the borough of Richmond."
+  },
+  {
+   "name": "West London",
+   "intro": "From Heathrow's edge through Chiswick and Ealing to Hammersmith, Fulham and Chelsea."
+  },
+  {
+   "name": "South London",
+   "intro": "South of the river, from Putney and Wimbledon to Clapham, Sutton and Croydon."
+  }
+ ],
+ "areas": {
+  "sunbury-on-thames": {
+   "name": "Sunbury-on-Thames",
+   "short": "Sunbury",
+   "pc": "TW16",
+   "lat": 51.4186,
+   "lng": -0.418,
+   "council": "Spelthorne Borough Council",
+   "group": "Spelthorne & Runnymede",
+   "hoods": [
+    "Lower Sunbury",
+    "Sunbury Common",
+    "Sunbury Cross",
+    "Kempton Park",
+    "Upper Halliford",
+    "Charlton"
+   ],
+   "near": [
+    "shepperton",
+    "hampton",
+    "feltham",
+    "ashford",
+    "walton-on-thames",
+    "staines"
+   ],
+   "blurb": "Sunbury-on-Thames is home — our office is on Kings Avenue, TW16 — so we know every road from Upper Halliford and Charlton to Lower Sunbury and the riverside. Being local means short travel times, short-notice availability when you need it and a team that never has far to come.",
+   "homes": "riverside homes, 1930s semis and the newer developments around Sunbury Cross",
+   "parking": "Most residential roads in Sunbury have free on-street parking or driveways, so access is rarely a problem — just tell us about any restrictions near the station or Sunbury Cross.",
+   "know": [
+    "Lower Sunbury's riverside conservation area is mostly older cottages and period houses, while the streets around Sunbury Cross and Sunbury Common are 1930s semis, flats and newer developments. Tell us which you have and we'll suggest the right number of hours.",
+    "Because our office is in TW16, Sunbury is the easiest place for us to offer early-morning, evening and short-notice slots."
+   ],
+   "focus": {
+    "domestic": "Weekly and fortnightly cleans for family homes and flats across TW16, with the same cleaner every visit.",
+    "eot": "Fixed-price move-out cleans for rented flats and houses around Sunbury Cross, Staines Road West and Lower Sunbury, cleaned to the checklist letting agents use.",
+    "office": "Daily, weekly or out-of-hours cleaning for offices, studios and units around Sunbury Cross, Windmill Road and Hanworth Road."
+   }
+  },
+  "shepperton": {
+   "name": "Shepperton",
+   "short": "Shepperton",
+   "pc": "TW17",
+   "lat": 51.395,
+   "lng": -0.448,
+   "council": "Spelthorne Borough Council",
+   "group": "Spelthorne & Runnymede",
+   "hoods": [
+    "Shepperton village",
+    "Shepperton Green",
+    "Lower Halliford",
+    "Upper Halliford",
+    "Littleton",
+    "Charlton"
+   ],
+   "near": [
+    "sunbury-on-thames",
+    "walton-on-thames",
+    "chertsey",
+    "staines",
+    "weybridge"
+   ],
+   "blurb": "Shepperton is a short drive from our Sunbury base, so we cover Shepperton Green, Lower Halliford, Laleham Road and the village end by the river with the same local team every time.",
+   "homes": "detached family homes, bungalows and riverside properties",
+   "parking": "Driveways and unrestricted roads are the norm in Shepperton; the only tight spots are around the High Street and the station at busy times.",
+   "know": [
+    "Riverside and island homes around Shepperton Lock and Lower Halliford sometimes have limited vehicle access — let us know when you book so we can plan what to carry in.",
+    "Larger detached homes and bungalows usually suit a longer weekly or fortnightly visit; give us the number of bedrooms and bathrooms and we'll recommend the hours."
+   ],
+   "focus": {
+    "domestic": "Regular cleans for family houses and bungalows from the village to Shepperton Green, with one consistent cleaner.",
+    "eot": "Move-out cleans for rented houses and flats near the High Street and station, priced by property size rather than by the hour.",
+    "builders": "After an extension, loft conversion or new kitchen, we clear the fine dust the trades leave behind — floors, cupboards, window tracks and all."
+   }
+  },
+  "staines": {
+   "name": "Staines-upon-Thames",
+   "short": "Staines",
+   "pc": "TW18 & TW19",
+   "lat": 51.434,
+   "lng": -0.511,
+   "council": "Spelthorne Borough Council",
+   "group": "Spelthorne & Runnymede",
+   "hoods": [
+    "Staines town centre",
+    "Laleham",
+    "Egham Hythe",
+    "Knowle Green",
+    "Stanwell",
+    "Stanwell Moor"
+   ],
+   "near": [
+    "ashford",
+    "egham",
+    "sunbury-on-thames",
+    "shepperton",
+    "chertsey",
+    "feltham"
+   ],
+   "blurb": "From the town centre and Two Rivers to Laleham and Stanwell, Staines-upon-Thames is close to our Sunbury-on-Thames base and well placed for regular domestic cleans, end of tenancy cleans and office cleaning near the business parks.",
+   "homes": "town-centre apartments, terraced houses and family homes in Laleham",
+   "parking": "Around the town centre and station some streets have permit or time-limited bays; further out towards Laleham and Stanwell, parking is usually unrestricted.",
+   "know": [
+    "Staines has a lot of newer riverside and town-centre apartment blocks — if yours has a concierge, entry code or visitor bay, add it to your booking notes.",
+    "With Heathrow just to the north, plenty of households here work shifts. Early, late and weekend slots are available seven days a week."
+   ],
+   "focus": {
+    "domestic": "Weekly and fortnightly cleans for apartments, terraces and family homes across TW18 and TW19.",
+    "eot": "Apartment lets around the town centre and riverside change hands all year — our move-out cleans are fixed-price by number of bedrooms, with carpets optional.",
+    "office": "Cleaning for offices in the town centre and the business parks along The Causeway, before or after the working day."
+   }
+  },
+  "ashford": {
+   "name": "Ashford, Surrey",
+   "short": "Ashford",
+   "pc": "TW15",
+   "lat": 51.431,
+   "lng": -0.459,
+   "council": "Spelthorne Borough Council",
+   "group": "Spelthorne & Runnymede",
+   "hoods": [
+    "Ashford town centre",
+    "Ashford Common",
+    "Church Road",
+    "Ashford station"
+   ],
+   "near": [
+    "sunbury-on-thames",
+    "staines",
+    "feltham",
+    "shepperton",
+    "egham"
+   ],
+   "blurb": "Ashford is our next-door neighbour: the town centre is about two miles from our Sunbury office, and Ashford Common is closer still. That makes TW15 one of the quickest places for us to reach for regular cleans and short-notice bookings.",
+   "homes": "1930s semis, terraces and maisonettes, plus newer flats near the station",
+   "parking": "Most residential roads in Ashford are unrestricted; a few streets near the station and Church Road have time limits.",
+   "know": [
+    "Ashford sits between Heathrow and the M3, so many households work shifts or commute early. We clean seven days a week, {hours}, including early and evening slots.",
+    "This is Ashford in Surrey (TW15), in the borough of Spelthorne — not Ashford in Kent."
+   ],
+   "focus": {
+    "domestic": "Weekly and fortnightly cleans for semis, terraces, maisonettes and flats across TW15.",
+    "eot": "Move-out cleans for rented flats and houses near the station and Church Road, priced by number of bedrooms.",
+    "oneoff": "A one-off deep clean before guests, after a busy stretch or ahead of a sale — a minimum of four hours, with your priorities first."
+   }
+  },
+  "egham": {
+   "name": "Egham",
+   "short": "Egham",
+   "pc": "TW20",
+   "lat": 51.431,
+   "lng": -0.547,
+   "council": "Runnymede Borough Council",
+   "group": "Spelthorne & Runnymede",
+   "hoods": [
+    "Egham town centre",
+    "Englefield Green",
+    "Pooley Green",
+    "Egham Hythe",
+    "Thorpe"
+   ],
+   "near": [
+    "staines",
+    "chertsey",
+    "ashford",
+    "addlestone"
+   ],
+   "blurb": "Egham and Englefield Green are a short run along the A308 from Staines. We cover the town, the streets around Royal Holloway and out to Thorpe.",
+   "homes": "student houses and HMOs near Royal Holloway, Victorian terraces and family homes in Englefield Green",
+   "parking": "Roads near the station and the university have permit and time-limited parking, so please tell us where a cleaner can park or whether a visitor permit is available.",
+   "know": [
+    "Student tenancies around Royal Holloway mostly end between June and September — the busiest weeks for end of tenancy cleaning, so book as soon as you know your check-out date.",
+    "In a shared house, one fixed-price clean split between housemates is usually the simplest way to hand the property back."
+   ],
+   "focus": {
+    "eot": "Fixed-price cleans for student houses, HMOs and flats, including the oven, limescale and inside-cupboard work that inventory clerks check.",
+    "domestic": "Regular weekly or fortnightly cleans for family homes in Egham, Englefield Green and Thorpe.",
+    "office": "Cleaning for offices and practices in the town centre and the business parks towards The Causeway."
+   }
+  },
+  "chertsey": {
+   "name": "Chertsey",
+   "short": "Chertsey",
+   "pc": "KT16",
+   "lat": 51.39,
+   "lng": -0.503,
+   "council": "Runnymede Borough Council",
+   "group": "Spelthorne & Runnymede",
+   "hoods": [
+    "Chertsey town centre",
+    "Chertsey Meads",
+    "St Ann's Hill",
+    "Lyne",
+    "Ottershaw"
+   ],
+   "near": [
+    "addlestone",
+    "shepperton",
+    "staines",
+    "egham",
+    "weybridge"
+   ],
+   "blurb": "Chertsey is just across the river from Shepperton, reached from our Sunbury base over Chertsey Bridge. We cover the town centre, the streets by the Meads and out to Lyne and Ottershaw.",
+   "homes": "period cottages and townhouses near Guildford Street, modern riverside apartments and family homes towards Ottershaw",
+   "parking": "Most roads have free parking; the streets around Guildford Street and the station have some time limits, so a note about the nearest space helps.",
+   "know": [
+    "With St Peter's Hospital on the edge of town, plenty of households work shifts. We're open {hours}, seven days a week, so you can book around them.",
+    "Older cottages near the town centre often have original floors, beams and fireplaces — mention them and we'll go gently on wood and stone."
+   ],
+   "focus": {
+    "domestic": "Weekly and fortnightly cleans for cottages, townhouses, apartments and family homes across KT16.",
+    "eot": "Move-out cleans for riverside apartments and rented houses near the town centre, fixed-price by property size.",
+    "spring": "A seasonal deep clean that reaches inside cupboards, behind appliances and along skirting boards — from four hours."
+   }
+  },
+  "addlestone": {
+   "name": "Addlestone",
+   "short": "Addlestone",
+   "pc": "KT15",
+   "lat": 51.371,
+   "lng": -0.49,
+   "council": "Runnymede Borough Council",
+   "group": "Spelthorne & Runnymede",
+   "hoods": [
+    "Addlestone town centre",
+    "New Haw",
+    "Woodham",
+    "Row Town",
+    "Addlestonemoor"
+   ],
+   "near": [
+    "chertsey",
+    "weybridge",
+    "walton-on-thames",
+    "shepperton"
+   ],
+   "blurb": "Addlestone, New Haw and Woodham sit between Chertsey and Weybridge, and are covered by the same team that looks after both.",
+   "homes": "family semis and detached houses, newer apartments around the town centre and canal-side homes in New Haw",
+   "parking": "Driveways and unrestricted roads are typical; around the town centre and station a few streets have time limits.",
+   "know": [
+    "Close to junction 11 of the M25 and to Brooklands, Addlestone is a commuter town, so cleans while you're at work are easy to arrange with a key safe or a trusted key holder."
+   ],
+   "focus": {
+    "domestic": "Regular cleans for semis, detached houses and apartments in Addlestone, New Haw and Woodham.",
+    "builders": "Extensions and loft conversions leave fine dust on every floor — we remove it with HEPA-filter vacuums once the trades have finished.",
+    "eot": "Fixed-price move-out cleans for apartments around the town centre and rented family homes."
+   }
+  },
+  "walton-on-thames": {
+   "name": "Walton-on-Thames",
+   "short": "Walton",
+   "pc": "KT12",
+   "lat": 51.386,
+   "lng": -0.417,
+   "council": "Elmbridge Borough Council",
+   "group": "Elmbridge & Epsom",
+   "hoods": [
+    "Walton town centre",
+    "Ashley Park",
+    "Hersham",
+    "Walton Bridge",
+    "Rydens",
+    "Burwood Park"
+   ],
+   "near": [
+    "weybridge",
+    "molesey",
+    "esher",
+    "sunbury-on-thames",
+    "shepperton",
+    "hampton"
+   ],
+   "blurb": "Just across the river from our Sunbury base, Walton-on-Thames — including Hersham, Ashley Park and the riverside around Walton Bridge — is covered by our nearest team, so short-notice and same-day bookings are usually possible.",
+   "homes": "large detached houses in Ashley Park, family semis and new-build apartments near the station",
+   "parking": "Most Walton roads are unrestricted, with time limits and permit bays mainly near the station and town centre. Private estates such as Ashley Park and Burwood Park have their own access rules, so let us know about gates or codes.",
+   "know": [
+    "Fast trains from Walton station make this commuter territory — we can clean while you're at work, using a key safe or concierge."
+   ],
+   "focus": {
+    "domestic": "Weekly cleans for large detached houses, family semis and apartments, with one consistent cleaner who learns your home.",
+    "spring": "A seasonal deep clean for bigger homes — inside cupboards, behind appliances, tiles, grout and limescale.",
+    "eot": "Move-out cleans for apartments near the station and the town centre, and for rented family homes in Hersham."
+   }
+  },
+  "weybridge": {
+   "name": "Weybridge",
+   "short": "Weybridge",
+   "pc": "KT13",
+   "lat": 51.372,
+   "lng": -0.459,
+   "council": "Elmbridge Borough Council",
+   "group": "Elmbridge & Epsom",
+   "hoods": [
+    "Weybridge town centre",
+    "St George's Hill",
+    "Oatlands",
+    "Brooklands",
+    "Queens Road"
+   ],
+   "near": [
+    "walton-on-thames",
+    "addlestone",
+    "chertsey",
+    "esher",
+    "shepperton"
+   ],
+   "blurb": "Weybridge, St George's Hill, Oatlands and Brooklands are all within our core Surrey patch. Larger homes here suit a regular weekly clean plus a seasonal deep clean, and our cleaners work discreetly around busy households.",
+   "homes": "large family homes, St George's Hill estates and apartments around Brooklands",
+   "parking": "Gated estates such as St George's Hill need visitor access arranged in advance — add gate or security details to your booking. Elsewhere, driveways make parking simple.",
+   "know": [
+    "Offices and showrooms around Brooklands and The Heights can be cleaned early, late or at weekends so the working day isn't interrupted."
+   ],
+   "focus": {
+    "domestic": "Regular weekly cleans for large family homes, with the same vetted cleaner and your own priority list.",
+    "spring": "A full seasonal deep clean for larger properties, tackled room by room.",
+    "office": "Office and showroom cleaning around Brooklands, Queens Road and the town centre, outside working hours if you prefer."
+   }
+  },
+  "esher": {
+   "name": "Esher",
+   "short": "Esher",
+   "pc": "KT10",
+   "lat": 51.369,
+   "lng": -0.365,
+   "council": "Elmbridge Borough Council",
+   "group": "Elmbridge & Epsom",
+   "hoods": [
+    "Esher town centre",
+    "Claygate",
+    "Hinchley Wood",
+    "West End",
+    "Lower Green"
+   ],
+   "near": [
+    "walton-on-thames",
+    "molesey",
+    "surbiton",
+    "kingston",
+    "weybridge"
+   ],
+   "blurb": "Esher, Claygate and Hinchley Wood are reached in around 20 minutes from our Sunbury base. We provide regular home cleaning, one-off deep cleans and end of tenancy cleans across the KT10 area.",
+   "homes": "period houses, detached family homes and rental properties",
+   "parking": "Driveways are the norm; near Esher High Street and the stations at Claygate and Hinchley Wood, some roads have daytime commuter restrictions.",
+   "know": [
+    "Race days at Sandown Park bring heavy traffic and parking restrictions around Portsmouth Road, so a morning slot is the safest choice on those days."
+   ],
+   "focus": {
+    "domestic": "Weekly and fortnightly cleans for period houses and family homes in Esher, Claygate and Hinchley Wood.",
+    "spring": "A top-to-bottom seasonal clean — the detail work a weekly visit doesn't have time for.",
+    "eot": "Fixed-price move-out cleans for rented houses and flats across KT10, to the standard letting agents expect."
+   }
+  },
+  "molesey": {
+   "name": "East & West Molesey",
+   "short": "Molesey",
+   "pc": "KT8",
+   "lat": 51.401,
+   "lng": -0.355,
+   "council": "Elmbridge Borough Council",
+   "group": "Elmbridge & Epsom",
+   "hoods": [
+    "East Molesey",
+    "West Molesey",
+    "Hampton Court",
+    "Hurst Park",
+    "Bridge Road"
+   ],
+   "near": [
+    "hampton",
+    "walton-on-thames",
+    "esher",
+    "kingston",
+    "teddington",
+    "surbiton"
+   ],
+   "blurb": "East and West Molesey sit on the Surrey bank of the Thames opposite Hampton Court Palace. We cover the whole of KT8, from Bridge Road and Hampton Court station to Hurst Park and West Molesey.",
+   "homes": "Victorian and Edwardian houses in East Molesey, riverside apartments at Hurst Park and family homes in West Molesey",
+   "parking": "Streets near Hampton Court station and Bridge Road have permit and time-limited bays; most other Molesey roads are unrestricted.",
+   "know": [
+    "When Hampton Court Palace hosts its big summer events — garden shows and concert evenings — the roads around the bridge are very busy. Morning slots are the easiest then."
+   ],
+   "focus": {
+    "domestic": "Regular cleans for period houses, riverside apartments and family homes across KT8.",
+    "eot": "Move-out cleans for rented flats and houses near Hampton Court station and Bridge Road, priced by property size.",
+    "builders": "Renovating a Victorian or Edwardian house? Our after-builders clean removes plaster dust, paint splashes and debris before you move back in."
+   }
+  },
+  "epsom": {
+   "name": "Epsom",
+   "short": "Epsom",
+   "pc": "KT17, KT18 & KT19",
+   "lat": 51.333,
+   "lng": -0.269,
+   "council": "Epsom and Ewell Borough Council",
+   "group": "Elmbridge & Epsom",
+   "hoods": [
+    "Epsom town centre",
+    "Ewell",
+    "West Ewell",
+    "Stoneleigh",
+    "Epsom Downs",
+    "Langley Vale"
+   ],
+   "near": [
+    "sutton",
+    "surbiton",
+    "esher",
+    "kingston"
+   ],
+   "blurb": "Epsom, Ewell, Epsom Downs and Stoneleigh are within our Surrey coverage. Larger family homes here suit regular cleans, seasonal deep cleans and after-builders cleans following extensions and loft conversions.",
+   "homes": "detached family homes, period houses in Ewell village and newer developments on the former hospital sites",
+   "parking": "Around the town centre and station some roads are permit-only; elsewhere in Epsom and Ewell, on-street parking is generally free.",
+   "know": [
+    "Derby week in early June closes roads and fills the parking around Epsom Downs. If you're hosting, book your before- or after-party clean well ahead.",
+    "Students at the University for the Creative Arts and staff at Epsom Hospital rent across KT17 to KT19, so end of tenancy cleans are busiest in early summer."
+   ],
+   "focus": {
+    "eot": "Fixed-price end of tenancy cleans for flats and houses across Epsom and Ewell — oven, cupboards, limescale and interior windows included.",
+    "domestic": "Weekly and fortnightly house cleaning for family homes, with the same cleaner each visit.",
+    "spring": "A deep clean for the whole house: inside cupboards, behind furniture, tiles, grout and skirting boards."
+   }
+  },
+  "kingston": {
+   "name": "Kingston upon Thames",
+   "short": "Kingston",
+   "pc": "KT1 & KT2",
+   "lat": 51.41,
+   "lng": -0.3,
+   "council": "Royal Borough of Kingston upon Thames",
+   "group": "Kingston & Richmond upon Thames",
+   "hoods": [
+    "Kingston town centre",
+    "Norbiton",
+    "Canbury",
+    "Coombe",
+    "Kingston Hill",
+    "Kingston Vale",
+    "Hampton Wick"
+   ],
+   "near": [
+    "surbiton",
+    "teddington",
+    "hampton",
+    "molesey",
+    "richmond",
+    "wimbledon",
+    "esher"
+   ],
+   "blurb": "From the town centre and Norbiton to Coombe and Kingston Hill, we cover the whole of Kingston upon Thames for homes, student lets, HMOs and offices. End of tenancy cleans are in particular demand here at the end of the academic year.",
+   "homes": "town-centre apartments, student houses and larger homes on Kingston Hill",
+   "parking": "Most of central Kingston and Norbiton is a controlled parking zone, so a visitor permit or a note about the nearest pay-and-display bays helps us arrive on time. Coombe and Kingston Hill are mostly driveways.",
+   "know": [
+    "Kingston University tenancies around Penrhyn Road, Knights Park and Kingston Hill usually end between late June and early September — book your end of tenancy clean as soon as you have a check-out date."
+   ],
+   "focus": {
+    "eot": "Fixed-price cleans for student houses, HMOs and apartments, following the room-by-room checklist used at check-out.",
+    "domestic": "Weekly and fortnightly cleans for apartments by the river, terraces in Norbiton and larger homes in Coombe.",
+    "office": "Office cleaning around the town centre and the station, scheduled before opening or after closing."
+   }
+  },
+  "surbiton": {
+   "name": "Surbiton",
+   "short": "Surbiton",
+   "pc": "KT5 & KT6",
+   "lat": 51.394,
+   "lng": -0.304,
+   "council": "Royal Borough of Kingston upon Thames",
+   "group": "Kingston & Richmond upon Thames",
+   "hoods": [
+    "Surbiton town centre",
+    "Berrylands",
+    "Tolworth",
+    "Long Ditton",
+    "Southborough",
+    "Seething Wells"
+   ],
+   "near": [
+    "kingston",
+    "esher",
+    "molesey",
+    "epsom",
+    "teddington"
+   ],
+   "blurb": "Surbiton, Berrylands, Tolworth and Long Ditton are covered by the same team that looks after Kingston — ideal for commuters who want their home cleaned while they're at work.",
+   "homes": "mansion flats, Victorian villas and family semis in Berrylands",
+   "parking": "Roads around Surbiton station are in controlled parking zones on weekdays; further out in Berrylands and Tolworth, parking is usually unrestricted.",
+   "know": [
+    "With fast trains to Waterloo, Surbiton is commuter country. Most cleans here can happen while you're at work, with a key safe, concierge or neighbour holding a key."
+   ],
+   "focus": {
+    "domestic": "Regular cleans for mansion flats, Victorian villas and family semis, done while you're out at work.",
+    "eot": "Move-out cleans for rented flats near the station and houses across KT5 and KT6, at a fixed price.",
+    "oneoff": "A one-off deep clean when home needs a reset — before guests, after a busy stretch or ahead of an inspection."
+   }
+  },
+  "teddington": {
+   "name": "Teddington",
+   "short": "Teddington",
+   "pc": "TW11",
+   "lat": 51.426,
+   "lng": -0.333,
+   "council": "London Borough of Richmond upon Thames",
+   "group": "Kingston & Richmond upon Thames",
+   "hoods": [
+    "Teddington town centre",
+    "Teddington Lock",
+    "Broom Road",
+    "Fulwell",
+    "Hampton Wick",
+    "the Bushy Park side"
+   ],
+   "near": [
+    "hampton",
+    "twickenham",
+    "kingston",
+    "richmond",
+    "surbiton"
+   ],
+   "blurb": "Teddington, Hampton Wick and the streets around Bushy Park are well suited to regular weekly and fortnightly home cleaning — you'll see the same trusted cleaner every visit.",
+   "homes": "family houses near Bushy Park, period cottages and flats by Teddington Lock",
+   "parking": "Streets near Teddington station and the High Street are in a community parking zone for part of the day; elsewhere, parking is mostly free.",
+   "know": [
+    "Family homes backing onto Bushy Park and the river tend to collect extra mud and pet hair. Tell us about dogs and outdoor kit and we'll allow time for floors and utility rooms."
+   ],
+   "focus": {
+    "domestic": "Weekly and fortnightly cleans for family houses, cottages and riverside flats across TW11.",
+    "spring": "A seasonal deep clean that resets the whole house — cupboards, skirting boards, tiles and grout.",
+    "builders": "After a kitchen extension or loft conversion, we remove fine dust and paint splashes so the new space is ready to use."
+   }
+  },
+  "hampton": {
+   "name": "Hampton",
+   "short": "Hampton",
+   "pc": "TW12",
+   "lat": 51.415,
+   "lng": -0.368,
+   "council": "London Borough of Richmond upon Thames",
+   "group": "Kingston & Richmond upon Thames",
+   "hoods": [
+    "Hampton village",
+    "Hampton Hill",
+    "Hampton Court",
+    "Fulwell",
+    "Nurserylands"
+   ],
+   "near": [
+    "sunbury-on-thames",
+    "teddington",
+    "molesey",
+    "twickenham",
+    "feltham",
+    "kingston"
+   ],
+   "blurb": "Hampton and Hampton Hill are our neighbours to the east, a few minutes along the A308 from our Sunbury office. We cover all of TW12, from the riverside and the Hampton Court end to Hampton Hill High Street and Fulwell.",
+   "homes": "Victorian and Edwardian houses in Hampton village and Hampton Hill, 1930s semis and riverside apartments",
+   "parking": "Most TW12 roads are unrestricted; a few streets near the stations and Hampton Court have community parking zones or time limits.",
+   "know": [
+    "Between Bushy Park and the Thames, Hampton has plenty of family homes with dogs. Mention pets when you book and we'll allow extra time for hair on stairs and soft furnishings.",
+    "Race days at Kempton Park and big events at Hampton Court Palace can slow traffic on the A308 — morning slots are the most reliable on those days."
+   ],
+   "focus": {
+    "domestic": "Weekly and fortnightly cleans for period houses, semis and apartments in Hampton and Hampton Hill.",
+    "eot": "Fixed-price move-out cleans for rented flats and houses across TW12.",
+    "builders": "Loft conversions and rear extensions are popular here — once the work is finished, we clear the dust from every room it reached."
+   }
+  },
+  "twickenham": {
+   "name": "Twickenham",
+   "short": "Twickenham",
+   "pc": "TW1 & TW2",
+   "lat": 51.447,
+   "lng": -0.328,
+   "council": "London Borough of Richmond upon Thames",
+   "group": "Kingston & Richmond upon Thames",
+   "hoods": [
+    "Twickenham town centre",
+    "St Margarets",
+    "Strawberry Hill",
+    "Whitton",
+    "Twickenham Green",
+    "Fulwell"
+   ],
+   "near": [
+    "teddington",
+    "richmond",
+    "hampton",
+    "hounslow",
+    "kingston",
+    "feltham"
+   ],
+   "blurb": "Twickenham, St Margarets, Strawberry Hill and Whitton are all covered by our TW team. Match days at the stadium mean more after-party and one-off cleans — book ahead if you're hosting.",
+   "homes": "Victorian and Edwardian terraces, riverside flats and family homes in Strawberry Hill",
+   "parking": "On match and event days at the stadium, much of Twickenham has special parking restrictions on top of the usual community parking zones. Tell us about visitor permits and we'll plan around kick-off.",
+   "know": [
+    "Students at St Mary's University rent around Strawberry Hill and Teddington, with most tenancies ending in early summer — a busy time for end of tenancy cleans."
+   ],
+   "focus": {
+    "domestic": "Regular cleans for terraces, riverside flats and family homes across TW1 and TW2.",
+    "party": "Hosting on a match day? Our after-party clean deals with the glasses, floors, kitchen and bathrooms the next morning.",
+    "eot": "Move-out cleans for rented houses and student lets, at a fixed price by number of bedrooms."
+   }
+  },
+  "richmond": {
+   "name": "Richmond",
+   "short": "Richmond",
+   "pc": "TW9 & TW10",
+   "lat": 51.461,
+   "lng": -0.304,
+   "council": "London Borough of Richmond upon Thames",
+   "group": "Kingston & Richmond upon Thames",
+   "hoods": [
+    "Richmond town centre",
+    "Richmond Hill",
+    "The Vineyard",
+    "North Sheen",
+    "Ham",
+    "Petersham"
+   ],
+   "near": [
+    "kew",
+    "twickenham",
+    "barnes",
+    "teddington",
+    "kingston"
+   ],
+   "blurb": "Richmond, Richmond Hill, Ham and Petersham deserve a cleaner who takes care with period features — our Richmond team is used to Georgian townhouses, listed interiors and riverside apartments alike.",
+   "homes": "Georgian townhouses, riverside apartments and family homes in Ham",
+   "parking": "Central Richmond and the Hill are in community parking zones for most of the day, so a visitor permit or a note about the nearest pay-and-display helps; Ham and Petersham are mostly unrestricted.",
+   "know": [
+    "Many Richmond homes are listed or in conservation areas. Tell us about original floors, stone, marble or antique finishes and we'll use products that suit them."
+   ],
+   "focus": {
+    "domestic": "Regular weekly cleans for townhouses, apartments and family homes, with care taken over period features.",
+    "spring": "A seasonal deep clean for larger homes on the Hill and in Ham and Petersham.",
+    "eot": "Fixed-price end of tenancy cleans for flats and houses across TW9 and TW10."
+   }
+  },
+  "kew": {
+   "name": "Kew",
+   "short": "Kew",
+   "pc": "TW9",
+   "lat": 51.478,
+   "lng": -0.287,
+   "council": "London Borough of Richmond upon Thames",
+   "group": "Kingston & Richmond upon Thames",
+   "hoods": [
+    "Kew Green",
+    "Kew Village",
+    "Kew Gardens station",
+    "Kew Riverside",
+    "North Sheen"
+   ],
+   "near": [
+    "richmond",
+    "chiswick",
+    "barnes",
+    "hounslow"
+   ],
+   "blurb": "Kew, Kew Green and North Sheen are covered by our Richmond team. A regular fortnightly clean suits most Kew homes, and extras such as the oven or interior windows can be added before the holidays.",
+   "homes": "Victorian terraces, garden flats and family houses near Kew Gardens",
+   "parking": "Roads around Kew Gardens station and the Gardens are in a community parking zone and fill up with visitors, especially at weekends — a visitor permit makes arrival easier.",
+   "know": [
+    "Kew Riverside and the newer apartment blocks have concierge desks and underground parking; include access details in your booking notes."
+   ],
+   "focus": {
+    "domestic": "Weekly and fortnightly cleans for terraces, garden flats and family houses in Kew and North Sheen.",
+    "spring": "A thorough seasonal clean — the cupboards, skirting boards and limescale that a regular visit doesn't reach.",
+    "eot": "Move-out cleans for rented flats and houses near Kew Gardens station, fixed-price by property size."
+   }
+  },
+  "barnes": {
+   "name": "Barnes",
+   "short": "Barnes",
+   "pc": "SW13",
+   "lat": 51.474,
+   "lng": -0.243,
+   "council": "London Borough of Richmond upon Thames",
+   "group": "Kingston & Richmond upon Thames",
+   "hoods": [
+    "Barnes Village",
+    "Barnes Pond",
+    "Castelnau",
+    "North Barnes",
+    "Lonsdale Road",
+    "Mortlake"
+   ],
+   "near": [
+    "putney",
+    "hammersmith",
+    "kew",
+    "richmond",
+    "chiswick",
+    "fulham"
+   ],
+   "blurb": "Barnes Village, Castelnau, the Pond and Mortlake are covered on our Richmond–Putney route. A regular weekly clean plus one big spring clean a year works well for Barnes's family houses.",
+   "homes": "Georgian and Victorian village houses, riverside homes and family flats",
+   "parking": "Barnes has several community parking zones; a visitor permit helps if your road is in one.",
+   "know": [
+    "Period village houses often have original floorboards, fireplaces and sash windows — let us know and we'll take a gentler approach to wood and stone."
+   ],
+   "focus": {
+    "domestic": "Regular cleans for village houses, riverside homes and flats across SW13.",
+    "spring": "A once-a-year deep clean, room by room, including inside cupboards and behind furniture.",
+    "builders": "After a renovation, we remove dust, paint splashes and sticker residue so the house is ready to live in again."
+   }
+  },
+  "hounslow": {
+   "name": "Hounslow",
+   "short": "Hounslow",
+   "pc": "TW3, TW4 & TW5",
+   "lat": 51.468,
+   "lng": -0.361,
+   "council": "London Borough of Hounslow",
+   "group": "West London",
+   "hoods": [
+    "Hounslow town centre",
+    "Hounslow West",
+    "Lampton",
+    "Heston",
+    "Cranford",
+    "Isleworth",
+    "Osterley"
+   ],
+   "near": [
+    "feltham",
+    "twickenham",
+    "ealing",
+    "chiswick",
+    "staines",
+    "richmond"
+   ],
+   "blurb": "Hounslow, Isleworth, Heston, Cranford and Osterley are all a short drive from our base. Rental flats and shared houses here are a natural fit for our end of tenancy cleans, and we also clean offices and units around Heathrow and the Great West Road.",
+   "homes": "flats, Victorian terraces and rental properties near Heathrow",
+   "parking": "Controlled parking zones cover the town centre and the roads around Hounslow's Tube and rail stations; let us know if a visitor permit is needed.",
+   "know": [
+    "So close to Heathrow, many homes are let to airline and airport staff on shorter tenancies. Our fixed-price end of tenancy cleans are available seven days a week to fit tight check-out dates."
+   ],
+   "focus": {
+    "eot": "Fixed-price move-out cleans for flats, terraces and shared houses, with carpets optional.",
+    "domestic": "Weekly and fortnightly cleans for homes in Hounslow, Isleworth, Heston and Osterley.",
+    "office": "Cleaning for offices and commercial units near Heathrow and along the Great West Road, outside working hours."
+   }
+  },
+  "feltham": {
+   "name": "Feltham",
+   "short": "Feltham",
+   "pc": "TW13 & TW14",
+   "lat": 51.447,
+   "lng": -0.409,
+   "council": "London Borough of Hounslow",
+   "group": "West London",
+   "hoods": [
+    "Feltham town centre",
+    "Hanworth",
+    "Hanworth Park",
+    "Lower Feltham",
+    "North Feltham",
+    "Bedfont"
+   ],
+   "near": [
+    "sunbury-on-thames",
+    "ashford",
+    "hampton",
+    "hounslow",
+    "twickenham",
+    "staines"
+   ],
+   "blurb": "Feltham, Hanworth and Bedfont are right on our doorstep — Feltham town centre is only about two miles from our Sunbury office. We cover all of TW13 and TW14, including the newer apartments around Feltham station and the family streets towards Bedfont.",
+   "homes": "interwar semis and terraces, maisonettes and newer apartment blocks near the station",
+   "parking": "Some streets around Feltham station and the High Street have parking controls; most roads in Hanworth and Bedfont are unrestricted.",
+   "know": [
+    "With Heathrow on the doorstep, shift work is part of life in Feltham and Bedfont. We clean {hours} every day, so early and evening slots are available."
+   ],
+   "focus": {
+    "domestic": "Weekly and fortnightly cleans for semis, terraces, maisonettes and apartments across TW13 and TW14.",
+    "eot": "Move-out cleans for rented flats and houses, fixed-price by number of bedrooms and available seven days a week.",
+    "office": "Cleaning for offices at Bedfont Lakes and for commercial units near the airport, before or after the working day."
+   }
+  },
+  "chiswick": {
+   "name": "Chiswick",
+   "short": "Chiswick",
+   "pc": "W4",
+   "lat": 51.492,
+   "lng": -0.263,
+   "council": "London Borough of Hounslow",
+   "group": "West London",
+   "hoods": [
+    "Turnham Green",
+    "Bedford Park",
+    "Grove Park",
+    "Strand-on-the-Green",
+    "Chiswick High Road",
+    "Gunnersbury"
+   ],
+   "near": [
+    "hammersmith",
+    "kew",
+    "ealing",
+    "barnes",
+    "hounslow"
+   ],
+   "blurb": "Chiswick, Turnham Green, Bedford Park, Grove Park and Strand-on-the-Green are all on our west London round. We look after everything from mansion-block flats to large family houses off Chiswick High Road.",
+   "homes": "Bedford Park villas, mansion flats and family houses in Grove Park",
+   "parking": "Almost all of Chiswick is in a controlled parking zone, so a visitor permit — or a note about the nearest pay-by-phone bays — is the single most helpful thing you can add to a booking.",
+   "know": [
+    "Bedford Park's Arts and Crafts houses and the riverside cottages at Strand-on-the-Green often have original woodwork and tiled floors. Tell us and we'll go gently."
+   ],
+   "focus": {
+    "domestic": "Regular cleans for mansion flats, villas and family houses across W4.",
+    "office": "Office cleaning along Chiswick High Road and around Chiswick Business Park, early or late to suit your team.",
+    "eot": "Fixed-price end of tenancy cleans for flats and houses, to the checklist letting agents use."
+   }
+  },
+  "ealing": {
+   "name": "Ealing",
+   "short": "Ealing",
+   "pc": "W5 & W13",
+   "lat": 51.513,
+   "lng": -0.304,
+   "council": "London Borough of Ealing",
+   "group": "West London",
+   "hoods": [
+    "Ealing Broadway",
+    "Ealing Common",
+    "South Ealing",
+    "West Ealing",
+    "Northfields",
+    "Pitshanger",
+    "Hanwell"
+   ],
+   "near": [
+    "chiswick",
+    "hounslow",
+    "hammersmith",
+    "kew"
+   ],
+   "blurb": "Ealing Broadway, Ealing Common, West Ealing, Hanwell and Northfields are covered by our west London team, with regular domestic cleaning, end of tenancy cleans for the area's many rentals and office cleaning around the Broadway.",
+   "homes": "Edwardian houses, converted flats and new apartments near Ealing Broadway",
+   "parking": "Controlled parking zones cover most of central Ealing, West Ealing and Northfields during the day — a visitor permit avoids delays.",
+   "know": [
+    "The Elizabeth line has brought a wave of new apartment blocks around Ealing Broadway and West Ealing; for these we just need concierge or fob details in your booking notes.",
+    "University of West London students rent around South Ealing, with tenancies typically ending in summer."
+   ],
+   "focus": {
+    "eot": "Move-out cleans for converted flats, new apartments and shared houses, fixed-price by property size.",
+    "domestic": "Weekly and fortnightly cleans for Edwardian houses and flats across W5 and W13.",
+    "office": "Office cleaning around Ealing Broadway and Uxbridge Road, scheduled outside working hours."
+   }
+  },
+  "hammersmith": {
+   "name": "Hammersmith",
+   "short": "Hammersmith",
+   "pc": "W6",
+   "lat": 51.492,
+   "lng": -0.223,
+   "council": "London Borough of Hammersmith & Fulham",
+   "group": "West London",
+   "hoods": [
+    "Brook Green",
+    "Ravenscourt Park",
+    "Brackenbury Village",
+    "Lower Mall",
+    "Hammersmith Broadway",
+    "Barons Court"
+   ],
+   "near": [
+    "fulham",
+    "chiswick",
+    "barnes",
+    "chelsea",
+    "putney"
+   ],
+   "blurb": "Hammersmith, Brook Green, Ravenscourt Park and the riverside along Lower Mall are part of our west London round. Shared flats and rental properties here suit our fixed-price end of tenancy cleans, and we also clean offices around Hammersmith Broadway.",
+   "homes": "flats above shops, Victorian terraces and offices around the Broadway",
+   "parking": "The whole of Hammersmith is a controlled parking zone. Residents can usually arrange a visitor permit through the council — please set one up before the visit.",
+   "know": [
+    "Many Hammersmith flats are in mansion blocks or above shops with shared entrances; door codes and any stairs-only access are useful to know in advance."
+   ],
+   "focus": {
+    "eot": "Fixed-price cleans for shared flats and rental properties, with oven, limescale and interior windows included.",
+    "domestic": "Regular cleans for flats and terraces in Brook Green, Ravenscourt Park and Brackenbury Village.",
+    "office": "Office cleaning around Hammersmith Broadway and King Street — daily, weekly or out of hours."
+   }
+  },
+  "fulham": {
+   "name": "Fulham",
+   "short": "Fulham",
+   "pc": "SW6",
+   "lat": 51.475,
+   "lng": -0.2,
+   "council": "London Borough of Hammersmith & Fulham",
+   "group": "West London",
+   "hoods": [
+    "Parsons Green",
+    "Fulham Broadway",
+    "Sands End",
+    "Bishops Park",
+    "Munster Village",
+    "Walham Green"
+   ],
+   "near": [
+    "chelsea",
+    "hammersmith",
+    "putney",
+    "battersea",
+    "barnes"
+   ],
+   "blurb": "Fulham, Parsons Green, Fulham Broadway and Sands End are ideal for regular weekly cleaning — busy professionals and young families who want the same reliable cleaner every visit.",
+   "homes": "Victorian terraces, mansion flats and new riverside developments",
+   "parking": "All of Fulham is a controlled parking zone, with extra match-day restrictions near Stamford Bridge and Craven Cottage. A visitor permit arranged in advance saves time.",
+   "know": [
+    "Fulham's Victorian terraces are often extended into the loft and basement. When the builders leave, our after-builders clean deals with the fine dust that reaches every floor."
+   ],
+   "focus": {
+    "domestic": "Weekly cleans for terraces, mansion flats and riverside apartments, with the same cleaner each time.",
+    "builders": "Post-renovation cleaning after loft, basement and kitchen projects — dust, paint splashes and debris removed.",
+    "eot": "Fixed-price end of tenancy cleans for flats and house shares across SW6."
+   }
+  },
+  "chelsea": {
+   "name": "Chelsea",
+   "short": "Chelsea",
+   "pc": "SW3 & SW10",
+   "lat": 51.487,
+   "lng": -0.169,
+   "council": "Royal Borough of Kensington and Chelsea",
+   "group": "West London",
+   "hoods": [
+    "King's Road",
+    "Sloane Square",
+    "Chelsea Green",
+    "Cheyne Walk",
+    "World's End",
+    "Chelsea Harbour"
+   ],
+   "near": [
+    "fulham",
+    "battersea",
+    "hammersmith",
+    "clapham"
+   ],
+   "blurb": "Chelsea, the King's Road, World's End and Chelsea Harbour are covered by our central London team. Expect discreet, meticulous cleaners who are comfortable in high-value homes and used to working with concierges and key safes.",
+   "homes": "period townhouses, mansion-block apartments and Chelsea Harbour flats",
+   "parking": "Resident-permit bays cover almost every street in Chelsea, so cleaners rely on pay-by-phone bays. Tell us about the nearest ones, or any guest parking your building offers.",
+   "know": [
+    "During the Chelsea Flower Show in late May the streets around the Royal Hospital are extremely busy; choose an early slot if you live nearby."
+   ],
+   "focus": {
+    "domestic": "Discreet weekly cleans for townhouses and apartments, working with your concierge or key safe.",
+    "spring": "A meticulous seasonal deep clean, with care for stone, marble and antique finishes.",
+    "eot": "Fixed-price end of tenancy cleans for apartments and houses across SW3 and SW10."
+   }
+  },
+  "putney": {
+   "name": "Putney",
+   "short": "Putney",
+   "pc": "SW15",
+   "lat": 51.461,
+   "lng": -0.217,
+   "council": "London Borough of Wandsworth",
+   "group": "South London",
+   "hoods": [
+    "Putney High Street",
+    "East Putney",
+    "West Putney",
+    "Putney Heath",
+    "Putney Embankment",
+    "Roehampton"
+   ],
+   "near": [
+    "barnes",
+    "fulham",
+    "wimbledon",
+    "battersea",
+    "hammersmith"
+   ],
+   "blurb": "Putney, Putney Heath, Roehampton and the riverside embankment are all covered by our south-west London team — regular home cleaning, after-builders cleans for the area's many renovations and end of tenancy cleans.",
+   "homes": "mansion flats, family houses on the heath and Roehampton estates",
+   "parking": "Most of Putney is in a controlled parking zone on weekdays, so a visitor permit or the location of the nearest pay-by-phone bays is useful.",
+   "know": [
+    "Students at the University of Roehampton rent across SW15, so end of tenancy cleans are busiest from June to September."
+   ],
+   "focus": {
+    "domestic": "Regular cleans for mansion flats and family houses across SW15.",
+    "eot": "Fixed-price move-out cleans for flats and shared houses, cleaned to the inventory checklist.",
+    "builders": "After-builders cleaning once a renovation is finished — fine dust, paint splashes and residue removed."
+   }
+  },
+  "wimbledon": {
+   "name": "Wimbledon",
+   "short": "Wimbledon",
+   "pc": "SW19",
+   "lat": 51.421,
+   "lng": -0.207,
+   "council": "London Borough of Merton",
+   "group": "South London",
+   "hoods": [
+    "Wimbledon Village",
+    "Wimbledon town centre",
+    "Wimbledon Park",
+    "South Wimbledon",
+    "Merton Park",
+    "Southfields"
+   ],
+   "near": [
+    "putney",
+    "kingston",
+    "sutton",
+    "clapham",
+    "battersea"
+   ],
+   "blurb": "Wimbledon Village, Wimbledon Park, Southfields and South Wimbledon are all covered. Tennis fortnight brings a rush of short-let turnovers and after-party cleans — book early if you're hosting or letting.",
+   "homes": "large houses in the Village, Edwardian terraces and modern apartments near the station",
+   "parking": "Controlled parking zones cover most of Wimbledon, and extra restrictions apply around the All England Club during the Championships in late June and early July — a visitor permit is essential then.",
+   "know": [
+    "If you let your home during the tennis, book a clean between guests and a full reset afterwards well in advance — those two weeks fill up first."
+   ],
+   "focus": {
+    "domestic": "Weekly and fortnightly cleans for houses in the Village, terraces and apartments across SW19.",
+    "oneoff": "One-off deep cleans for short-let turnovers and before or after guests, from four hours.",
+    "eot": "Fixed-price end of tenancy cleans for flats and houses near the station and in South Wimbledon."
+   }
+  },
+  "battersea": {
+   "name": "Battersea",
+   "short": "Battersea",
+   "pc": "SW11",
+   "lat": 51.47,
+   "lng": -0.164,
+   "council": "London Borough of Wandsworth",
+   "group": "South London",
+   "hoods": [
+    "Battersea Park",
+    "Battersea Power Station",
+    "Nine Elms",
+    "Clapham Junction",
+    "Lavender Hill",
+    "Northcote Road"
+   ],
+   "near": [
+    "clapham",
+    "chelsea",
+    "fulham",
+    "putney",
+    "wimbledon"
+   ],
+   "blurb": "Battersea, Nine Elms, Northcote Road and the streets around Battersea Park — including the new Power Station developments — are on our south-west London round for regular cleans, move-in/move-out cleans and after-builders cleans.",
+   "homes": "new-build apartments in Nine Elms, Victorian terraces off Northcote Road and mansion flats by the park",
+   "parking": "Most of Battersea is in a controlled parking zone. Newer developments in Nine Elms and at the Power Station usually have concierge-managed visitor bays, so please book one if you can.",
+   "know": [
+    "New-build apartments often come with a snagging list and a layer of construction dust. An after-builders or move-in clean before you unpack makes a big difference."
+   ],
+   "focus": {
+    "eot": "Move-out cleans for apartments and house shares around Clapham Junction, Nine Elms and the park.",
+    "builders": "After-builders and move-in cleans for new-build apartments and renovated terraces.",
+    "domestic": "Regular cleans for apartments, terraces and mansion flats across SW11."
+   }
+  },
+  "clapham": {
+   "name": "Clapham",
+   "short": "Clapham",
+   "pc": "SW4",
+   "lat": 51.462,
+   "lng": -0.138,
+   "council": "London Borough of Lambeth",
+   "group": "South London",
+   "hoods": [
+    "Clapham Common",
+    "Clapham Old Town",
+    "Abbeville Village",
+    "Clapham High Street",
+    "Clapham North",
+    "Clapham Park"
+   ],
+   "near": [
+    "battersea",
+    "wimbledon",
+    "putney",
+    "chelsea",
+    "croydon"
+   ],
+   "blurb": "Clapham Common, Clapham Old Town, Abbeville Village and Clapham North are covered by our SW team. With so many shared flats and rentals, end of tenancy cleans and one-off deep cleans are in steady demand here.",
+   "homes": "period conversions, shared flats and family homes in Abbeville Village",
+   "parking": "Clapham is covered by controlled parking zones on weekdays; ask your flatmates or landlord about visitor permits before the clean.",
+   "know": [
+    "House shares mean several tenants and one deposit. A single fixed-price end of tenancy clean, split between you, is usually the simplest way to hand the place back."
+   ],
+   "focus": {
+    "eot": "Fixed-price end of tenancy cleans for shared flats and period conversions — one price for the whole property.",
+    "oneoff": "A one-off deep clean after a party, before a viewing or when the flat simply needs a reset.",
+    "domestic": "Weekly and fortnightly cleans for flats and family homes around the Common and Abbeville Village."
+   }
+  },
+  "sutton": {
+   "name": "Sutton",
+   "short": "Sutton",
+   "pc": "SM1, SM2 & SM3",
+   "lat": 51.361,
+   "lng": -0.193,
+   "council": "London Borough of Sutton",
+   "group": "South London",
+   "hoods": [
+    "Sutton town centre",
+    "Cheam",
+    "North Cheam",
+    "South Cheam",
+    "Belmont",
+    "Carshalton"
+   ],
+   "near": [
+    "epsom",
+    "croydon",
+    "wimbledon",
+    "surbiton"
+   ],
+   "blurb": "Sutton, Cheam, Carshalton and Belmont are covered by our south London team, with regular domestic cleaning, end of tenancy cleans and office cleaning around the town centre.",
+   "homes": "1930s semis, family houses in Cheam and flats around Sutton town centre",
+   "parking": "Around the town centre and station most roads are permit-controlled; in Cheam, Belmont and Carshalton, parking is usually easy.",
+   "know": [
+    "The larger family houses in Cheam and South Cheam usually suit a longer weekly visit, while flats near Sutton station are often fine with two or three hours."
+   ],
+   "focus": {
+    "domestic": "Home cleaning for semis and family houses in Sutton and Cheam, and for flats near the station.",
+    "eot": "End of tenancy cleans across Sutton, Cheam and Carshalton, fixed-price by number of bedrooms.",
+    "office": "Office cleaning around Sutton town centre and the High Street, outside working hours if you prefer."
+   }
+  },
+  "croydon": {
+   "name": "Croydon",
+   "short": "Croydon",
+   "pc": "CR0 & CR2",
+   "lat": 51.376,
+   "lng": -0.098,
+   "council": "London Borough of Croydon",
+   "group": "South London",
+   "hoods": [
+    "East Croydon",
+    "South Croydon",
+    "Addiscombe",
+    "Waddon",
+    "Shirley",
+    "Purley Way"
+   ],
+   "near": [
+    "sutton",
+    "clapham",
+    "wimbledon",
+    "epsom"
+   ],
+   "blurb": "East Croydon, South Croydon, Addiscombe and the Purley Way area are covered by our south London team — from new-build apartments near the station to family houses and offices in the town centre.",
+   "homes": "new-build apartments, Victorian terraces and offices around East Croydon",
+   "parking": "Central Croydon's controlled parking zones run long hours. Many newer towers near East Croydon have concierge-managed visitor bays, so let us know what's available.",
+   "know": [
+    "Croydon's rental market moves quickly. Our fixed-price end of tenancy cleans can often be arranged within a day or two of your check-out date."
+   ],
+   "focus": {
+    "eot": "Fixed-price move-out cleans for apartments and terraces, with professional carpet cleaning as an option.",
+    "office": "Office cleaning around East Croydon and the town centre — daily, weekly or out of hours.",
+    "domestic": "Regular cleans for apartments and family houses in Addiscombe, Shirley and South Croydon."
+   }
+  }
+ }
 }

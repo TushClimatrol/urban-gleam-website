@@ -1,0 +1,325 @@
+{
+  "_comment": "Photo manifest. To add or swap a photo: put the JPEG in /img with a descriptive lowercase-hyphenated name, add/edit its entry here (alt = plain description of what is visible; caption = shown on the gallery; tag = service label), then run: python3 tools/optimise-images.py && python3 tools/build-seo.py",
+  "team_photo": "urban-gleam-cleaners-bedroom-deep-clean-before-after.jpg",
+  "service_photos": {
+    "_comment": "Which gallery photos appear on each service page (service ids: domestic, office, eot, builders, spring, oneoff, party, emergency). Only use photos of your own work.",
+    "domestic": [
+      "urban-gleam-cleaners-bedroom-deep-clean-before-after.jpg"
+    ],
+    "spring": [
+      "urban-gleam-cleaners-bedroom-deep-clean-before-after.jpg"
+    ],
+    "oneoff": [
+      "urban-gleam-cleaners-bedroom-deep-clean-before-after.jpg"
+    ],
+    "eot": [
+      "end-of-tenancy-clean-kitchen-diner.jpg",
+      "end-of-tenancy-clean-bathroom.jpg",
+      "end-of-tenancy-clean-bedroom.jpg"
+    ]
+  },
+  "brand": {
+    "_comment": "Share card (1200x630, used for og:image on general pages) and plain crops of the team photo for the business structured data.",
+    "card": {
+      "file": "urban-gleam-eco-friendly-cleaners.jpg",
+      "w": 1200,
+      "h": 630,
+      "alt": "Two Urban Gleam cleaners at work in a freshly cleaned bedroom"
+    },
+    "crops": {
+      "16x9": {
+        "file": "urban-gleam-cleaners-at-work-16x9.jpg",
+        "w": 1095,
+        "h": 616
+      },
+      "4x3": {
+        "file": "urban-gleam-cleaners-at-work-4x3.jpg",
+        "w": 821,
+        "h": 616
+      },
+      "1x1": {
+        "file": "urban-gleam-cleaners-at-work-1x1.jpg",
+        "w": 616,
+        "h": 616
+      }
+    }
+  },
+  "gallery": [
+    {
+      "file": "urban-gleam-cleaners-bedroom-deep-clean-before-after.jpg",
+      "alt": "Two Urban Gleam cleaners deep cleaning a bedroom, before and after: clutter cleared, carpet vacuumed and bed made",
+      "caption": "Our team in action — full bedroom deep clean, dusted, vacuumed and styled",
+      "tag": "Deep clean",
+      "w": 1312,
+      "h": 1199,
+      "webp": [
+        {
+          "file": "urban-gleam-cleaners-bedroom-deep-clean-before-after-640.webp",
+          "w": 640
+        },
+        {
+          "file": "urban-gleam-cleaners-bedroom-deep-clean-before-after-1280.webp",
+          "w": 1280
+        }
+      ]
+    },
+    {
+      "file": "end-of-tenancy-clean-bedroom.jpg",
+      "alt": "Bedroom after an end of tenancy clean, with a spotless laminate floor, clear desk and empty wardrobe",
+      "caption": "End of tenancy — bedroom left spotless and inspection-ready",
+      "tag": "End of tenancy",
+      "w": 1400,
+      "h": 933,
+      "webp": [
+        {
+          "file": "end-of-tenancy-clean-bedroom-640.webp",
+          "w": 640
+        },
+        {
+          "file": "end-of-tenancy-clean-bedroom-1280.webp",
+          "w": 1280
+        }
+      ]
+    },
+    {
+      "file": "end-of-tenancy-clean-kitchen-diner.jpg",
+      "alt": "Open-plan kitchen-diner after an end of tenancy clean, with polished floor tiles and clear grey worktops",
+      "caption": "End of tenancy — kitchen-diner with floors polished to a mirror shine",
+      "tag": "End of tenancy",
+      "w": 1400,
+      "h": 933,
+      "webp": [
+        {
+          "file": "end-of-tenancy-clean-kitchen-diner-640.webp",
+          "w": 640
+        },
+        {
+          "file": "end-of-tenancy-clean-kitchen-diner-1280.webp",
+          "w": 1280
+        }
+      ]
+    },
+    {
+      "file": "end-of-tenancy-clean-bathroom.jpg",
+      "alt": "Bathroom after an end of tenancy clean: limescale-free shower screen, double basin and gleaming chrome taps",
+      "caption": "End of tenancy — bathroom descaled, glass and chrome gleaming",
+      "tag": "End of tenancy",
+      "w": 1400,
+      "h": 930,
+      "webp": [
+        {
+          "file": "end-of-tenancy-clean-bathroom-640.webp",
+          "w": 640
+        },
+        {
+          "file": "end-of-tenancy-clean-bathroom-1280.webp",
+          "w": 1280
+        }
+      ]
+    },
+    {
+      "file": "end-of-tenancy-clean-double-bedroom.jpg",
+      "alt": "Double bedroom after an end of tenancy clean, with dust-free furniture and a clean laminate floor",
+      "caption": "End of tenancy — every room handed back to agency standard",
+      "tag": "End of tenancy",
+      "w": 1400,
+      "h": 933,
+      "webp": [
+        {
+          "file": "end-of-tenancy-clean-double-bedroom-640.webp",
+          "w": 640
+        },
+        {
+          "file": "end-of-tenancy-clean-double-bedroom-1280.webp",
+          "w": 1280
+        }
+      ]
+    },
+    {
+      "file": "end-of-tenancy-clean-kitchen.jpg",
+      "alt": "Kitchen after an end of tenancy clean: degreased hob and oven, clear worktops and a polished tiled floor",
+      "caption": "End of tenancy — kitchen degreased, hob and worktops like new",
+      "tag": "End of tenancy",
+      "w": 1400,
+      "h": 935,
+      "webp": [
+        {
+          "file": "end-of-tenancy-clean-kitchen-640.webp",
+          "w": 640
+        },
+        {
+          "file": "end-of-tenancy-clean-kitchen-1280.webp",
+          "w": 1280
+        }
+      ]
+    },
+    {
+      "file": "kitchen-island-deep-clean-before-after.jpg",
+      "alt": "Kitchen before and after a deep clean: packaging and debris cleared, island and floor scrubbed",
+      "caption": "Deep clean — kitchen island cleared, scrubbed and polished",
+      "tag": "Deep clean",
+      "w": 1024,
+      "h": 646,
+      "webp": [
+        {
+          "file": "kitchen-island-deep-clean-before-after-640.webp",
+          "w": 640
+        },
+        {
+          "file": "kitchen-island-deep-clean-before-after-1024.webp",
+          "w": 1024
+        }
+      ]
+    },
+    {
+      "file": "galley-kitchen-deep-clean-before-after.jpg",
+      "alt": "Small galley kitchen before and after a deep clean: clutter removed, units and floor scrubbed",
+      "caption": "Deep clean — kitchen cleared and scrubbed, before and after",
+      "tag": "Deep clean",
+      "w": 700,
+      "h": 465,
+      "webp": [
+        {
+          "file": "galley-kitchen-deep-clean-before-after-700.webp",
+          "w": 700
+        }
+      ]
+    },
+    {
+      "file": "bathroom-deep-clean-before-after.jpg",
+      "alt": "Bathroom before and after a deep clean: floor cleared and tiles, toilet and basin scrubbed",
+      "caption": "Deep clean — bathroom refreshed top to bottom, before and after",
+      "tag": "Deep clean",
+      "w": 700,
+      "h": 465,
+      "webp": [
+        {
+          "file": "bathroom-deep-clean-before-after-700.webp",
+          "w": 700
+        }
+      ]
+    },
+    {
+      "file": "shower-limescale-removal-before-after.jpg",
+      "alt": "Shower cubicle before and after heavy limescale and soap scum were removed",
+      "caption": "Deep clean — shower restored from heavy limescale to like-new",
+      "tag": "Deep clean",
+      "w": 1288,
+      "h": 853,
+      "webp": [
+        {
+          "file": "shower-limescale-removal-before-after-640.webp",
+          "w": 640
+        },
+        {
+          "file": "shower-limescale-removal-before-after-1280.webp",
+          "w": 1280
+        }
+      ]
+    },
+    {
+      "file": "after-builders-clean-bathroom-before-after.jpg",
+      "alt": "Bathroom before and after an after builders clean: packaging, dust and debris removed",
+      "caption": "After builders — bathroom dust-free and handover-ready",
+      "tag": "After builders",
+      "w": 1024,
+      "h": 647,
+      "webp": [
+        {
+          "file": "after-builders-clean-bathroom-before-after-640.webp",
+          "w": 640
+        },
+        {
+          "file": "after-builders-clean-bathroom-before-after-1024.webp",
+          "w": 1024
+        }
+      ]
+    },
+    {
+      "file": "after-builders-clean-ensuite-before-after.jpg",
+      "alt": "En-suite before and after an after builders clean: renovation debris cleared from the floor and vanity unit",
+      "caption": "After builders — renovation debris gone, en-suite gleaming",
+      "tag": "After builders",
+      "w": 1024,
+      "h": 637,
+      "webp": [
+        {
+          "file": "after-builders-clean-ensuite-before-after-640.webp",
+          "w": 640
+        },
+        {
+          "file": "after-builders-clean-ensuite-before-after-1024.webp",
+          "w": 1024
+        }
+      ]
+    },
+    {
+      "file": "oven-cleaning-before-after.jpg",
+      "alt": "Oven door and racks before and after cleaning, with burnt-on grease removed",
+      "caption": "Oven clean — grease and burnt-on carbon fully removed",
+      "tag": "Oven clean",
+      "w": 1200,
+      "h": 630,
+      "webp": [
+        {
+          "file": "oven-cleaning-before-after-640.webp",
+          "w": 640
+        },
+        {
+          "file": "oven-cleaning-before-after-1200.webp",
+          "w": 1200
+        }
+      ]
+    },
+    {
+      "file": "oven-interior-cleaning-before-after.jpg",
+      "alt": "Inside of an oven before and after cleaning, with carbon deposits removed from the walls and base",
+      "caption": "Oven clean — even the classics come up sparkling",
+      "tag": "Oven clean",
+      "w": 608,
+      "h": 600,
+      "webp": [
+        {
+          "file": "oven-interior-cleaning-before-after-608.webp",
+          "w": 608
+        }
+      ]
+    },
+    {
+      "file": "hard-floor-cleaning-before-after.jpg",
+      "alt": "Wood-effect tiled floor before and after machine cleaning with a rotary floor scrubber",
+      "caption": "Floor clean — machine-buffed back to its original finish",
+      "tag": "Floor clean",
+      "w": 1400,
+      "h": 934,
+      "webp": [
+        {
+          "file": "hard-floor-cleaning-before-after-640.webp",
+          "w": 640
+        },
+        {
+          "file": "hard-floor-cleaning-before-after-1280.webp",
+          "w": 1280
+        }
+      ]
+    },
+    {
+      "file": "carpet-cleaning-before-after.jpg",
+      "alt": "Bedroom carpet before and after cleaning, with large stains lifted",
+      "caption": "Floor clean — carpet stains lifted, wall to wall",
+      "tag": "Floor clean",
+      "w": 1400,
+      "h": 700,
+      "webp": [
+        {
+          "file": "carpet-cleaning-before-after-640.webp",
+          "w": 640
+        },
+        {
+          "file": "carpet-cleaning-before-after-1280.webp",
+          "w": 1280
+        }
+      ]
+    }
+  ]
+}
