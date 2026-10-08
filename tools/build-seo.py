@@ -337,7 +337,7 @@ def guard_js(not_found_flag):
     return ('<script>(function(){var p=location.pathname;if(p==="/"||p==="/index.html")return;'
             'var K=' + json.dumps(PAGE_PATHS, separators=(',', ':')) + ',M=' + json.dumps(MOVED, separators=(',', ':')) + ';'
             'var b=p.replace(/\\/index\\.html$/,"").replace(/\\/+$/,"").toLowerCase();'
-            'var t=K.indexOf(b+"/")>-1?b+"/"+location.search+location.hash:M[b];'
+            'var t=K.indexOf(b+"/")>-1?(b+"/"===p?"":b+"/"+location.search+location.hash):M[b];'
             'if(t){location.replace(t);return;}' + tail + '})();</script>')
 h = replace_block(h, 'route-guard', guard_js(True))
 
