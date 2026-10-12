@@ -51,7 +51,7 @@ BIZ = {
     'postcode': 'TW16 7QE',
     'lat': 51.4268394, 'lng': -0.4221821,
     'gbp': 'https://maps.google.com/?cid=10111168519048199372',
-    'opens': '07:00', 'closes': '21:00', 'hours_text': '7am–9pm',
+    'opens': '07:00', 'closes': '20:00', 'hours_text': '7am–8pm',
     # real profile URLs only (Facebook page, Instagram account ...) — they are added to the structured data
     'social': [],
 }

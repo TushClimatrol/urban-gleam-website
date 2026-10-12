@@ -186,74 +186,6 @@
       ]
     },
     {
-      "file": "bathroom-deep-clean-before-after.jpg",
-      "alt": "Bathroom before and after a deep clean: floor cleared and tiles, toilet and basin scrubbed",
-      "caption": "Deep clean — bathroom refreshed top to bottom, before and after",
-      "tag": "Deep clean",
-      "w": 700,
-      "h": 465,
-      "webp": [
-        {
-          "file": "bathroom-deep-clean-before-after-700.webp",
-          "w": 700
-        }
-      ]
-    },
-    {
-      "file": "shower-limescale-removal-before-after.jpg",
-      "alt": "Shower cubicle before and after heavy limescale and soap scum were removed",
-      "caption": "Deep clean — shower restored from heavy limescale to like-new",
-      "tag": "Deep clean",
-      "w": 1288,
-      "h": 853,
-      "webp": [
-        {
-          "file": "shower-limescale-removal-before-after-640.webp",
-          "w": 640
-        },
-        {
-          "file": "shower-limescale-removal-before-after-1280.webp",
-          "w": 1280
-        }
-      ]
-    },
-    {
-      "file": "after-builders-clean-bathroom-before-after.jpg",
-      "alt": "Bathroom before and after an after builders clean: packaging, dust and debris removed",
-      "caption": "After builders — bathroom dust-free and handover-ready",
-      "tag": "After builders",
-      "w": 1024,
-      "h": 647,
-      "webp": [
-        {
-          "file": "after-builders-clean-bathroom-before-after-640.webp",
-          "w": 640
-        },
-        {
-          "file": "after-builders-clean-bathroom-before-after-1024.webp",
-          "w": 1024
-        }
-      ]
-    },
-    {
-      "file": "after-builders-clean-ensuite-before-after.jpg",
-      "alt": "En-suite before and after an after builders clean: renovation debris cleared from the floor and vanity unit",
-      "caption": "After builders — renovation debris gone, en-suite gleaming",
-      "tag": "After builders",
-      "w": 1024,
-      "h": 637,
-      "webp": [
-        {
-          "file": "after-builders-clean-ensuite-before-after-640.webp",
-          "w": 640
-        },
-        {
-          "file": "after-builders-clean-ensuite-before-after-1024.webp",
-          "w": 1024
-        }
-      ]
-    },
-    {
       "file": "oven-cleaning-before-after.jpg",
       "alt": "Oven door and racks before and after cleaning, with burnt-on grease removed",
       "caption": "Oven clean — grease and burnt-on carbon fully removed",
@@ -268,56 +200,6 @@
         {
           "file": "oven-cleaning-before-after-1200.webp",
           "w": 1200
-        }
-      ]
-    },
-    {
-      "file": "oven-interior-cleaning-before-after.jpg",
-      "alt": "Inside of an oven before and after cleaning, with carbon deposits removed from the walls and base",
-      "caption": "Oven clean — even the classics come up sparkling",
-      "tag": "Oven clean",
-      "w": 608,
-      "h": 600,
-      "webp": [
-        {
-          "file": "oven-interior-cleaning-before-after-608.webp",
-          "w": 608
-        }
-      ]
-    },
-    {
-      "file": "hard-floor-cleaning-before-after.jpg",
-      "alt": "Wood-effect tiled floor before and after machine cleaning with a rotary floor scrubber",
-      "caption": "Floor clean — machine-buffed back to its original finish",
-      "tag": "Floor clean",
-      "w": 1400,
-      "h": 934,
-      "webp": [
-        {
-          "file": "hard-floor-cleaning-before-after-640.webp",
-          "w": 640
-        },
-        {
-          "file": "hard-floor-cleaning-before-after-1280.webp",
-          "w": 1280
-        }
-      ]
-    },
-    {
-      "file": "carpet-cleaning-before-after.jpg",
-      "alt": "Bedroom carpet before and after cleaning, with large stains lifted",
-      "caption": "Floor clean — carpet stains lifted, wall to wall",
-      "tag": "Floor clean",
-      "w": 1400,
-      "h": 700,
-      "webp": [
-        {
-          "file": "carpet-cleaning-before-after-640.webp",
-          "w": 640
-        },
-        {
-          "file": "carpet-cleaning-before-after-1280.webp",
-          "w": 1280
         }
       ]
     }
