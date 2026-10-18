@@ -792,6 +792,23 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
 .policy p { color: var(--ink-soft); margin-bottom: 18px; }
 .policy p strong { color: var(--ink); }
 .nf-links { display: flex; gap: 12px; flex-wrap: wrap; margin: 28px 0 18px; }
+.guide h2 { font-size: 1.45rem; margin: 38px 0 14px; }
+.guide p, .guide li { color: var(--ink-soft); }
+.guide ul { padding-left: 22px; margin: 0 0 18px; }
+.guide ul li { margin-bottom: 8px; line-height: 1.6; }
+.guide .check { list-style: none; padding: 0; display: grid; gap: 8px; }
+.guide .check li { display: flex; gap: 12px; align-items: flex-start; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; font-size: 14.5px; }
+.guide .check li::before { content: ''; flex: none; width: 18px; height: 18px; margin-top: 2px; border: 2px solid var(--pine); border-radius: 5px; }
+.guide .tip { background: var(--mist, #eef6f1); border-left: 4px solid var(--pine); border-radius: 0 14px 14px 0; padding: 16px 20px; margin: 22px 0; font-size: 14.5px; }
+.guide .tip p { margin: 0; }
+.guide .meta { font-size: 13px; color: var(--ink-soft); margin: 0 0 24px; }
+.guide .eot-table td.p { white-space: nowrap; }
+.guide-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 30px 0 60px; }
+.guide-cards a { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 24px; color: inherit; }
+.guide-cards a:hover { border-color: var(--pine); }
+.guide-cards h2 { font-size: 1.2rem; margin-bottom: 8px; color: var(--pine-deep); }
+.guide-cards p { color: var(--ink-soft); font-size: 14.5px; margin: 0; }
+@media (max-width: 760px) { .guide-cards { grid-template-columns: 1fr; } }
 @media (max-width: 960px) { .steps { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 760px) { .svc-list, .hub-grid, .which { grid-template-columns: 1fr; } .sp-hero { padding-top: 110px; } }
 @media (max-width: 520px) { .steps { grid-template-columns: 1fr; } }

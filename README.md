@@ -7,11 +7,12 @@ Live at <https://urbangleamcleaning.com>. Pushing to `main` deploys automaticall
 | What | Where | Edit by hand? |
 |---|---|---|
 | Homepage, booking form, all CSS and JavaScript | `index.html` | Yes |
-| Prices, extras, what each service includes | the `CONFIG` block and `SERVICE_PAGES` inside the `<script>` in `index.html` | Yes |
+| Prices, extras, what each service includes | the `CONFIG` block and `SERVICE_PAGES` inside the `<script>` in `index.html`. Three pricing kinds: hourly (`rate`/`min`/`minH`), `fixed: true` (end of tenancy table), or `options` (oven, carpet, window — a list of `[id, label, price]`; `null` price = quoted) | Yes |
 | Areas and their local details | `tools/areas.json` | Yes |
 | Photos, alt text, which photo shows where | `tools/photos.json` + files in `img/` | Yes |
 | Page titles and search descriptions | `HOME` / `SERVICE_META` at the top of `tools/build-seo.py` | Yes |
-| `services/`, `areas/`, `privacy/`, `legal/`, `404.html`, old-address redirects (`about-us/`, `prices/` …), `assets/site.css`, `sitemap.xml`, `robots.txt` | generated | **No** — they are rewritten on every build |
+| Guide articles (`/guides/…`) | `tools/guides.py` — `{price:…}` placeholders are filled from the live prices | Yes |
+| `services/`, `areas/`, `guides/`, `privacy/`, `legal/`, `404.html`, old-address redirects (`about-us/`, `prices/` …), `assets/site.css`, `sitemap.xml`, `robots.txt` | generated | **No** — they are rewritten on every build |
 
 ## After any change
 

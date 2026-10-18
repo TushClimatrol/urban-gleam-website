@@ -45,7 +45,7 @@ BIZ = {
     'phone_e164': '+447942369735',
     'whatsapp': '447942369735',
     'email': 'contact@urbangleamcleaning.com',
-    'street': 'Braemar House, Kings Avenue',
+    'street': '30 Kings Avenue',
     'town': 'Sunbury-on-Thames',
     'county': 'Surrey',
     'postcode': 'TW16 7QE',
@@ -56,8 +56,8 @@ BIZ = {
     'social': [],
 }
 HOME = {
-    'title': 'Urban Gleam | Eco-Friendly Cleaners in London & Surrey',
-    'desc': 'Vetted, insured eco-friendly cleaners for homes and offices across London & Surrey. Domestic cleaning from £22.50/hr, end of tenancy from £130. Book online.',
+    'title': 'Urban Gleam | Cleaners in Sunbury-on-Thames, Surrey & SW London',
+    'desc': 'Vetted, insured eco-friendly cleaners in Sunbury-on-Thames, Surrey & SW London. Domestic cleaning from £22.50/hr, end of tenancy from £130. Rated 5.0 on Google.',
 }
 # slug, id used inside index.html, <title>, search description
 SERVICE_META = [
@@ -77,11 +77,20 @@ SERVICE_META = [
      'Fast, discreet after party cleaning — rubbish, glassware, spills, kitchen and bathrooms reset. From £25/hr, 7 days a week across London & Surrey.'),
     ('emergency-cleaning', 'emergency', 'Emergency & Same-Day Cleaning in London & Surrey',
      'Urgent same-day cleaning across London & Surrey for spills, inspections and last-minute viewings. From £30/hr, £120 minimum. Call 07942 369735.'),
+    ('communal-area-cleaning', 'communal', 'Communal Area Cleaning in London & Surrey from £25/hr',
+     'Regular cleaning of hallways, stairwells, lifts and bin stores for landlords, managing agents and residents’ associations. From £25/hr, sign-off sheet every visit.'),
+    ('oven-cleaning', 'oven', 'Oven Cleaning in London & Surrey from £45',
+     'Professional oven cleaning with a dip-tank system and non-caustic, food-safe products. Single oven £45, double £65, range cooker £85. Sunbury-on-Thames based.'),
+    ('carpet-cleaning', 'carpet', 'Carpet & Sofa Cleaning in London & Surrey from £25',
+     'Hot-water extraction carpet, rug and sofa cleaning that lifts stains, odours and allergens. £25 per room (minimum £60), sofas from £40. Dry in 2–4 hours.'),
+    ('window-cleaning', 'window', 'Window Cleaning in Surrey & SW London from £15',
+     'Pure-water exterior window cleaning and hand-finished interior glass for homes and offices. From £15 for a flat or small house. One-off or regular visits.'),
 ]
 SLUG_BY_ID = {sid: slug for slug, sid, _, _ in SERVICE_META}
 SHORT_NAME = {'domestic': 'Domestic cleaning', 'office': 'Office cleaning', 'eot': 'End of tenancy cleaning',
               'builders': 'After builders cleaning', 'spring': 'Spring cleaning', 'oneoff': 'One-off deep cleaning',
-              'party': 'After party cleaning', 'emergency': 'Emergency cleaning'}
+              'party': 'After party cleaning', 'emergency': 'Emergency cleaning', 'communal': 'Communal area cleaning',
+              'oven': 'Oven cleaning', 'carpet': 'Carpet and upholstery cleaning', 'window': 'Window cleaning'}
 # one line per service for the hub page and "which clean do I need?"
 HUB_LINE = {
     'domestic': 'Weekly, fortnightly or monthly cleans by the same trusted cleaner.',
@@ -92,6 +101,10 @@ HUB_LINE = {
     'oneoff': 'One intensive visit with no ongoing commitment, built around your priorities.',
     'party': 'The morning-after reset: rubbish, glassware, floors, kitchen and bathrooms.',
     'emergency': 'A priority same-day clean when it can’t wait.',
+    'communal': 'Hallways, stairwells, lifts and bin stores on a regular rota for blocks of flats.',
+    'oven': 'Racks, trays and glass dip-tank cleaned; grease and carbon gone.',
+    'carpet': 'Hot-water extraction for carpets, rugs and sofas — dry in a few hours.',
+    'window': 'Pure-water exterior cleaning and streak-free interior glass.',
 }
 # the other names people search for, said once in plain English on each service page
 ALSO_KNOWN_AS = {
@@ -103,6 +116,10 @@ ALSO_KNOWN_AS = {
     'oneoff': 'Some people call it a one-time clean or a one-off deep clean.',
     'party': 'It’s also booked as post-party or after-event cleaning.',
     'emergency': 'People also ask for same-day, urgent or last-minute cleaning — this is that service.',
+    'communal': 'Managing agents call it common parts cleaning, block cleaning or communal cleaning — it’s the same rota.',
+    'oven': 'Also searched for as professional oven cleaning, oven valeting or cooker cleaning.',
+    'carpet': 'You may know it as steam cleaning, carpet shampooing or hot-water extraction; sofa cleaning is often called upholstery cleaning.',
+    'window': 'Also called reach-and-wash, pure-water or pole window cleaning for the outside, and traditional window cleaning inside.',
 }
 HOW_BOOKING_WORKS = [
     ('Choose your service', 'Tell us the size of the job: hours for hourly services, bedrooms for fixed-price cleans.'),
@@ -119,6 +136,10 @@ WHICH_CLEAN = [
     ('You need a workplace cleaned', 'office'),
     ('You hosted last night', 'party'),
     ('It has to be done today', 'emergency'),
+    ('You look after a block of flats or an HMO', 'communal'),
+    ('The oven has seen better days', 'oven'),
+    ('Carpets or the sofa need a proper deep clean', 'carpet'),
+    ('The windows need doing, inside or out', 'window'),
 ]
 # addresses from the previous website that other sites and Google may still point at -> where they go now
 MOVED = {
@@ -203,22 +224,33 @@ def js_const(name):
     e = eol - 1 if h[eol - 2:eol] == close + ';' else h.index('\n  ' + close + ';', s) + 4
     return json.loads(subprocess.check_output(['node', '-e', f'console.log(JSON.stringify({h[s:e]}))']).decode())
 
+LM_FILE = 'tools/lastmod.json'
+LM_PREVIEW = json.load(open(LM_FILE)) if os.path.exists(LM_FILE) else {}
 SERVICES = js_const('SERVICES')          # rates, minimums
 EOT_PRICES = js_const('EOT_PRICES')      # fixed prices by property size [without carpets, with carpets]
 EOT_PRICES = dict(sorted(EOT_PRICES.items(), key=lambda kv: (kv[0] != 'studio', kv[0])))    # studio first, then 1, 2, 3, 4+
 EOT_LABELS = js_const('EOT_LABELS')
 SP = js_const('SERVICE_PAGES')           # copy for each service page
 STATIC = js_const('STATIC_PAGES')        # privacy / legal copy
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from guides import GUIDES                # article pages, tools/guides.py
 for _, sid, _, _ in SERVICE_META:
     assert sid in SERVICES and sid in SP, f'service {sid} missing from index.html'
 
 def is_fixed(sid): return bool(SERVICES[sid].get('fixed'))
+def is_opt(sid): return bool(SERVICES[sid].get('options'))      # priced per option (oven type, rooms, property)
+def is_hourly(sid): return not is_fixed(sid) and not is_opt(sid)
+def opt_prices(sid): return [o for o in SERVICES[sid]['options'] if o[2] is not None]
+def opt_from(sid): return min(o[2] for o in opt_prices(sid))
 FIXED_FROM = min(v[0] for v in EOT_PRICES.values() if v)
 def price_line(sid):
-    return f'fixed from {money(FIXED_FROM)}' if is_fixed(sid) else f'from {money(SERVICES[sid]["rate"])}/hr'
+    if is_fixed(sid): return f'fixed from {money(FIXED_FROM)}'
+    if is_opt(sid): return f'fixed from {money(opt_from(sid))}'
+    return f'from {money(SERVICES[sid]["rate"])}/hr'
 def min_line(sid):
     s = SERVICES[sid]
     if is_fixed(sid): return 'Priced by property size'
+    if is_opt(sid): return s['m']
     return f'Minimum {s["minH"]} hours · {money(s["min"])}' if s['minH'] > 2 else f'Minimum {money(s["min"])} per visit'
 
 HOME_FAQ = re.findall(r'<button class="faq-q"[^>]*>(.*?)<span class="faq-icon">.*?<div class="faq-a"><p>(.*?)</p>',
@@ -270,7 +302,7 @@ def ld_business_full():
         "areaServed": [{"@type": "AdministrativeArea", "name": "Greater London"}, {"@type": "AdministrativeArea", "name": "Surrey"}]
                       + [{"@type": "Place", "name": a['name']} for a in AREAS.values()],
         "sameAs": [BIZ['gbp']] + BIZ['social'],
-        "knowsAbout": ["Domestic cleaning", "Office cleaning", "End of tenancy cleaning", "After builders cleaning", "Deep cleaning", "Eco-friendly cleaning"],
+        "knowsAbout": ["Domestic cleaning", "Office cleaning", "End of tenancy cleaning", "After builders cleaning", "Deep cleaning", "Communal area cleaning", "Oven cleaning", "Carpet cleaning", "Window cleaning", "Eco-friendly cleaning"],
         "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Cleaning services", "itemListElement": [
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": SHORT_NAME[sid], "url": f"{SITE}/services/{slug}/"}}
             for slug, sid, _, _ in SERVICE_META]},
@@ -288,6 +320,8 @@ def ld_script(obj):
 def ld_offer(sid):
     if is_fixed(sid):
         spec = {"@type": "PriceSpecification", "priceCurrency": "GBP", "minPrice": f"{FIXED_FROM:.2f}"}
+    elif is_opt(sid):
+        spec = {"@type": "PriceSpecification", "priceCurrency": "GBP", "minPrice": f"{opt_from(sid):.2f}"}
     else:
         spec = {"@type": "UnitPriceSpecification", "priceCurrency": "GBP", "price": f"{SERVICES[sid]['rate']:.2f}", "unitCode": "HUR", "unitText": "hour"}
     return {"@type": "Offer", "priceCurrency": "GBP", "url": f"{SITE}/#book", "priceSpecification": spec}
@@ -327,7 +361,7 @@ h = replace_block(h, 'seo', '\n' + seo_head(SITE + '/', HOME['title'], HOME['des
 
 # every real page, for the address check below (index.html is also what the host serves for unknown addresses)
 PAGE_PATHS = (['/services/'] + [f'/services/{slug}/' for slug, _, _, _ in SERVICE_META] +
-              ['/areas/'] + [f'/areas/{s}/' for s in AREAS] + ['/privacy/', '/legal/'])
+              ['/areas/'] + [f'/areas/{s}/' for s in AREAS] + ['/guides/'] + [f'/guides/{g["slug"]}/' for g in GUIDES] + ['/privacy/', '/legal/'])
 def guard_js(not_found_flag):
     """Runs before anything else. The host answers unknown addresses with this page, so:
        /areas/kingston -> /areas/kingston/ ; old-site addresses -> their new home ; anything else is
@@ -467,6 +501,23 @@ css += '''
 .policy p { color: var(--ink-soft); margin-bottom: 18px; }
 .policy p strong { color: var(--ink); }
 .nf-links { display: flex; gap: 12px; flex-wrap: wrap; margin: 28px 0 18px; }
+.guide h2 { font-size: 1.45rem; margin: 38px 0 14px; }
+.guide p, .guide li { color: var(--ink-soft); }
+.guide ul { padding-left: 22px; margin: 0 0 18px; }
+.guide ul li { margin-bottom: 8px; line-height: 1.6; }
+.guide .check { list-style: none; padding: 0; display: grid; gap: 8px; }
+.guide .check li { display: flex; gap: 12px; align-items: flex-start; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; font-size: 14.5px; }
+.guide .check li::before { content: ''; flex: none; width: 18px; height: 18px; margin-top: 2px; border: 2px solid var(--pine); border-radius: 5px; }
+.guide .tip { background: var(--mist, #eef6f1); border-left: 4px solid var(--pine); border-radius: 0 14px 14px 0; padding: 16px 20px; margin: 22px 0; font-size: 14.5px; }
+.guide .tip p { margin: 0; }
+.guide .meta { font-size: 13px; color: var(--ink-soft); margin: 0 0 24px; }
+.guide .eot-table td.p { white-space: nowrap; }
+.guide-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 30px 0 60px; }
+.guide-cards a { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 24px; color: inherit; }
+.guide-cards a:hover { border-color: var(--pine); }
+.guide-cards h2 { font-size: 1.2rem; margin-bottom: 8px; color: var(--pine-deep); }
+.guide-cards p { color: var(--ink-soft); font-size: 14.5px; margin: 0; }
+@media (max-width: 760px) { .guide-cards { grid-template-columns: 1fr; } }
 @media (max-width: 960px) { .steps { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 760px) { .svc-list, .hub-grid, .which { grid-template-columns: 1fr; } .sp-hero { padding-top: 110px; } }
 @media (max-width: 520px) { .steps { grid-template-columns: 1fr; } }
@@ -557,6 +608,11 @@ def fixed_table():
         for k, v in EOT_PRICES.items())
     return ('<div class="table-wrap"><table class="eot-table"><thead><tr><th>Property size</th><th>Without carpet cleaning</th>'
             f'<th>With carpet cleaning</th></tr></thead><tbody>{rows}</tbody></table></div>')
+def option_table(sid):
+    s = SERVICES[sid]
+    rows = ''.join(f'<tr><td>{esc(o[1])}</td><td class="p">{money(o[2]) if o[2] is not None else "Individual quote"}</td></tr>' for o in s['options'])
+    return ('<div class="table-wrap"><table class="eot-table"><thead><tr><th>Option</th><th>Fixed price</th></tr></thead>'
+            f'<tbody>{rows}</tbody></table></div>')
 def hourly_table(sid):
     s = SERVICES[sid]
     rows = ''.join(f'<tr><td>{hrs} hours</td><td class="p">{money(max(s["rate"] * hrs, s["min"]))}</td></tr>'
@@ -576,8 +632,18 @@ def emit(path, url, htmltext, images=()):
 SERVICE_PHOTOS = {k: v for k, v in PHOTOS.get('service_photos', {}).items() if not k.startswith('_')}
 top_areas = ['sunbury-on-thames', 'shepperton', 'staines', 'walton-on-thames', 'hampton', 'feltham', 'kingston', 'twickenham', 'richmond', 'wimbledon', 'putney', 'ealing']
 
+OPT_INTRO = {
+    'oven': 'Oven cleaning is a fixed price by oven type, so you know the cost before we start. Add the hob and extractor for one combined price.',
+    'carpet': 'Carpet cleaning is priced per room with a {min} minimum call-out, and sofas and armchairs are priced per piece. Whole-house jobs, rugs and heavily stained carpets are quoted individually.',
+    'window': 'Exterior window cleaning is a fixed price by property type. Inside-and-outside cleans, conservatories and taller buildings are quoted after a quick look.',
+}
 def service_price_block(sid, name):
     s = SERVICES[sid]
+    if is_opt(sid):
+        return (f'<h2 id="prices">{name} prices</h2>\n'
+                f'<p>{OPT_INTRO[sid].format(min=money(opt_from(sid)))}</p>\n'
+                f'{option_table(sid)}\n'
+                '<p class="small-note"><strong>Prices include eco-friendly products and equipment.</strong> No deposit — you pay after the clean.</p>')
     if is_fixed(sid):
         return (f'<h2 id="prices">{name} prices</h2>\n'
                 f'<p>{name} is a fixed price based on the size of the property, not an hourly rate — so you know the cost before we start, however long the job takes.</p>\n'
@@ -592,6 +658,10 @@ def service_price_block(sid, name):
 
 def service_price_faq(sid, name):
     s = SERVICES[sid]
+    if is_opt(sid):
+        return (f'How much does {name.lower()} cost?',
+                f'It is a fixed price by option: {join_and([o[1].lower() + " " + money(o[2]) for o in opt_prices(sid)])}. '
+                'Anything not listed is quoted individually. Products and equipment are included, and you pay after the clean.')
     if is_fixed(sid):
         return (f'How much does {name.lower()} cost?',
                 f'It is a fixed price by property size: {fixed_price_sentence()}, with professional carpet cleaning available for a fixed supplement. '
@@ -614,8 +684,9 @@ def service_figs(sid):
 
 def price_card(sid, sp):
     head = (f'<div class="from">Fixed prices</div><div class="amt">{money(FIXED_FROM)} <small>from</small></div>' if is_fixed(sid) else
+            f'<div class="from">Fixed prices</div><div class="amt">{money(opt_from(sid))} <small>from</small></div>' if is_opt(sid) else
             f'<div class="from">From</div><div class="amt">{money(SERVICES[sid]["rate"])} <small>/hour</small></div>')
-    head += '<div class="from" style="margin-top:6px;text-transform:none;letter-spacing:0">Price for one professional cleaner</div>'
+    head += '<div class="from" style="margin-top:6px;text-transform:none;letter-spacing:0">' + ('Products and equipment included' if is_opt(sid) else 'Price for one professional cleaner') + '</div>'
     rows = ''.join(f'<div class="sp-price-row"><span>{amp(r[0])}</span><strong>{amp(r[1])}</strong></div>' for r in sp['rows'])
     return (f'<aside class="sp-price-card" aria-label="Prices and booking"><div class="sp-price-head">{head}</div><div class="sp-price-body">{rows}'
             f'<a class="btn btn-solid" href="/#book-{sid}">Book this clean <span class="arr">→</span></a>'
@@ -684,16 +755,20 @@ hub_cards = ''.join(
 hourly_rows = ''.join(
     f'<tr><td><a href="/services/{slug}/">{SHORT_NAME[sid]}</a></td><td class="p">{money(SERVICES[sid]["rate"])} per hour</td>'
     f'<td>{SERVICES[sid]["minH"]} hours · {money(SERVICES[sid]["min"])}</td></tr>'
-    for slug, sid, _, _ in SERVICE_META if not is_fixed(sid))
+    for slug, sid, _, _ in SERVICE_META if is_hourly(sid))
 which = ''.join(f'<li>{q}<a href="/services/{SLUG_BY_ID[sid]}/">{SHORT_NAME[sid]} →</a></li>' for q, sid in WHICH_CLEAN)
-hourly_from = min(SERVICES[sid]['rate'] for _, sid, _, _ in SERVICE_META if not is_fixed(sid))
-hub_desc = (f'All eight Urban Gleam cleaning services and their prices: domestic cleaning from {money(hourly_from)}/hr, office from '
-            f'{money(SERVICES["office"]["rate"])}/hr, end of tenancy and after builders fixed from {money(FIXED_FROM)}.')
+hourly_from = min(SERVICES[sid]['rate'] for _, sid, _, _ in SERVICE_META if is_hourly(sid))
+N_SERVICES = {8: 'eight', 9: 'nine', 10: 'ten', 11: 'eleven', 12: 'twelve'}.get(len(SERVICE_META), str(len(SERVICE_META)))
+hub_desc = (f'All {N_SERVICES} Urban Gleam cleaning services and their prices: domestic cleaning from {money(hourly_from)}/hr, '
+            f'end of tenancy from {money(FIXED_FROM)}, oven cleaning from {money(opt_from("oven"))}, carpets {money(opt_from("carpet"))} a room.')
+option_rows = ''.join(
+    f'<tr><td><a href="/services/{slug}/">{SHORT_NAME[sid]}</a></td><td class="p">From {money(opt_from(sid))}</td><td>{SERVICES[sid]["m"]}</td></tr>'
+    for slug, sid, _, _ in SERVICE_META if is_opt(sid))
 body = f'''<section class="sp-hero"><div class="container">
 {c_html}
 <span class="eyebrow" style="display:flex">Services &amp; prices</span>
 <h1>Cleaning services and <span class="accent-g">prices.</span></h1>
-<p class="sp-tag">Eight services, one clear price list. Every price is for one professional cleaner and includes eco-friendly products and equipment. There are no deposits, and you pay after your clean.</p>
+<p class="sp-tag">{N_SERVICES.capitalize()} services, one clear price list. Every price is for one professional cleaner and includes eco-friendly products and equipment. There are no deposits, and you pay after your clean.</p>
 </div></section>
 <div class="container" style="padding-bottom:90px">
 <div class="hub-grid">{hub_cards}</div>
@@ -704,7 +779,12 @@ body = f'''<section class="sp-hero"><div class="container">
 <section class="hub-section">
 <h2>Fixed prices: end of tenancy and after builders cleaning</h2>
 {fixed_table()}
-<p class="small-note">The same fixed prices apply to <a href="/services/end-of-tenancy-cleaning/">end of tenancy cleaning</a> and <a href="/services/after-builders-cleaning/">after builders cleaning</a>. Hourly services exclude professional window, carpet and upholstery cleaning — ask us for a quote.</p>
+<p class="small-note">The same fixed prices apply to <a href="/services/end-of-tenancy-cleaning/">end of tenancy cleaning</a> and <a href="/services/after-builders-cleaning/">after builders cleaning</a>. Hourly services exclude professional window, carpet and upholstery cleaning — those are priced separately below.</p>
+</section>
+<section class="hub-section">
+<h2>Fixed prices: oven, carpet and window cleaning</h2>
+<div class="table-wrap"><table class="eot-table"><thead><tr><th>Service</th><th>From</th><th>How it’s priced</th></tr></thead><tbody>{option_rows}</tbody></table></div>
+<p class="small-note">Full price lists are on each service page. Anything unusual — a whole house of carpets, a conservatory roof — is quoted individually, usually the same day.</p>
 </section>
 <section class="hub-section">
 <h2>Which clean do I need?</h2>
@@ -851,6 +931,78 @@ for key, slug, title, desc in (
             '<div class="container policy">\n' + '\n'.join('<p>' + amp(p) + '</p>' for p in d['body']) + '\n</div>')
     emit(f'{slug}/index.html', url, shell(url, title, desc, body, [c_ld]))
 
+# ====================================================================== 8b. guides
+def fill_prices(text):
+    def one(m):
+        kind, arg = m.group(1), m.group(2)
+        if kind == 'price': return money(SERVICES[arg]['rate'])
+        if kind == 'min': return money(SERVICES[arg]['min'])
+        if kind == 'price_from': return money(FIXED_FROM if is_fixed(arg) else opt_from(arg) if is_opt(arg) else SERVICES[arg]['min'])
+        if kind == 'eot':
+            v = EOT_PRICES[arg]; return f'{money(v[0])} / {money(v[1])}' if v else 'Quoted individually'
+        if kind == 'opt':
+            sid, oid = arg.split(':'); return money(next(o[2] for o in SERVICES[sid]['options'] if o[0] == oid))
+        raise KeyError(kind)
+    return re.sub(r'\{(price|min|price_from|eot|opt):([a-z0-9:]+)\}', one, text)
+
+def guide_block(b):
+    kind = b[0]
+    if kind == 'h2': return f'<h2>{amp(b[1])}</h2>'
+    if kind == 'p': return f'<p>{amp(fill_prices(b[1]))}</p>'
+    if kind == 'ul': return '<ul>' + ''.join(f'<li>{amp(fill_prices(i))}</li>' for i in b[1]) + '</ul>'
+    if kind == 'check': return '<ul class="check">' + ''.join(f'<li><span>{amp(i)}</span></li>' for i in b[1]) + '</ul>'
+    if kind == 'tip': return f'<div class="tip"><p>{amp(fill_prices(b[1]))}</p></div>'
+    if kind == 'table':
+        head = ''.join(f'<th>{amp(c)}</th>' for c in b[1])
+        rows = ''.join('<tr>' + ''.join(f'<td{" class=" + chr(34) + "p" + chr(34) if j else ""}>{amp(fill_prices(c))}</td>' for j, c in enumerate(r)) + '</tr>' for r in b[2])
+        return f'<div class="table-wrap"><table class="eot-table"><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>'
+    raise ValueError(kind)
+
+guide_index_cards = []
+for g in GUIDES:
+    url = f'{SITE}/guides/{g["slug"]}/'
+    path = f'guides/{g["slug"]}/index.html'
+    c_html, c_ld = crumbs([('Home', '/'), ('Guides', '/guides/'), (strip_tags(g['title']).split(':')[0].split('?')[0].strip(), f'/guides/{g["slug"]}/')])
+    faqs = [(q, fill_prices(a)) for q, a in g['faqs']]
+    words = len(strip_tags(' '.join(str(b) for b in g['sections'])).split())
+    modified = LM_PREVIEW.get(url, {}).get('lastmod', TODAY)
+    art_ld = {"@context": "https://schema.org", "@type": "Article", "@id": url + '#article', "headline": g['title'], "description": g['desc'],
+              "url": url, "mainEntityOfPage": url, "datePublished": g['published'], "dateModified": modified, "inLanguage": "en-GB",
+              "wordCount": words, "author": biz_ref(), "publisher": biz_ref(),
+              "image": [f"{SITE}/img/{CARD['file']}"], "about": {"@type": "Thing", "name": "Cleaning services"}}
+    body = f'''<section class="sp-hero"><div class="container">
+{c_html}
+<span class="eyebrow" style="display:flex">Guide</span>
+<h1>{g['h1']}</h1>
+<p class="sp-tag">{amp(g['summary'])}</p>
+</div></section>
+<div class="container sp-grid">
+<div class="sp-body guide">
+<p class="meta">By the Urban Gleam team · Updated <time datetime="{modified}">{date.fromisoformat(modified).strftime('%-d %B %Y')}</time> · {max(1, round(words / 220))} min read</p>
+{''.join(guide_block(b) for b in g['sections'])}
+<h2>Common questions</h2>
+{faq_html(faqs)}
+<h2>Related</h2>
+{service_links()}
+<p><a href="/guides/">All guides →</a> · <a href="/services/">Compare all services and prices →</a></p>
+</div>
+{price_card(g['cta'], SP[g['cta']])}
+</div>'''
+    emit(path, url, shell(url, g['title'] + ' | Urban Gleam', g['desc'], body, [art_ld, c_ld, ld_faq(faqs)], 'services'))
+    guide_index_cards.append(f'<a href="/guides/{g["slug"]}/"><h2>{amp(strip_tags(g["title"]))}</h2><p>{amp(g["desc"])}</p></a>')
+
+url = SITE + '/guides/'
+c_html, c_ld = crumbs([('Home', '/'), ('Guides', '/guides/')])
+body = f'''<section class="sp-hero"><div class="container">
+{c_html}
+<span class="eyebrow" style="display:flex">Guides</span>
+<h1>Cleaning guides and <span class="accent-g">price checks.</span></h1>
+<p class="sp-tag">Plain answers to the questions people ask before they book a cleaner — what things cost, what letting agents check, and how to compare quotes. Written by the team that does the cleaning.</p>
+</div></section>
+<div class="container"><div class="guide-cards">{''.join(guide_index_cards)}</div></div>'''
+emit('guides/index.html', url, shell(url, 'Cleaning Guides: Prices, Checklists & Advice | Urban Gleam',
+     'Guides from Urban Gleam: 2026 cleaning prices in London & Surrey, the end of tenancy cleaning checklist letting agents use, and how to compare cleaning quotes.', body, [c_ld], 'services'))
+
 body = f'''<section class="sp-hero" style="padding-bottom:110px"><div class="container">
 <span class="eyebrow" style="display:flex">Page not found</span>
 <h1>We couldn’t find that <span class="accent">page.</span></h1>
@@ -887,8 +1039,7 @@ for parent in ('areas', 'services'):
             shutil.rmtree(p); print('  removed stale page', p)
 
 # ====================================================================== 9. sitemap + robots
-LM_FILE = 'tools/lastmod.json'
-LM = json.load(open(LM_FILE)) if os.path.exists(LM_FILE) else {}
+LM = dict(LM_PREVIEW)
 def lastmod(url, path):
     digest = hashlib.sha1(read(path).encode()).hexdigest()
     if LM.get(url, {}).get('hash') != digest:
