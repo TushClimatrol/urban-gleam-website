@@ -9,9 +9,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="shortcut icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#147A4B">
 <meta name="google-site-verification" content="OhIOwJEj3R8XOwFW3ButaiRzo2Bx1407DxJ2L0-GJnM">
@@ -668,6 +670,10 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
 .join-done strong { display: block; font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 8px; }
 .join-done p { color: var(--ink-soft); font-size: 14px; }
 .hiring-chip { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #fff; background: var(--rose); border-radius: 999px; padding: 4px 10px; margin-left: 8px; vertical-align: middle; }
+.btn-hiring { gap: 9px; border-color: rgba(217,55,106,.35); color: var(--rose); }
+.btn-hiring .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--rose); animation: pulse-rose 2s infinite; }
+@keyframes pulse-rose { 0%,100% { box-shadow: 0 0 0 0 rgba(217,55,106,.4); } 50% { box-shadow: 0 0 0 6px rgba(217,55,106,0); } }
+.btn-hiring:hover { border-color: var(--rose); color: var(--rose); }
 .join-aside { position: sticky; top: 100px; }
 @media (max-width: 520px) { .jf-grid { grid-template-columns: 1fr; } .join-card { padding: 20px; } .join-card .jc-head { flex-direction: column; align-items: flex-start; gap: 8px; } }
 .nav-links a .hiring-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--rose); margin-left: 5px; vertical-align: 2px; }
@@ -865,6 +871,7 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
       <div class="hero-ctas load-up d2">
         <a class="btn btn-solid magnet" href="#book">Book a clean <span class="arr">→</span></a>
         <a class="btn btn-line" href="#prices">See prices</a>
+        <a class="btn btn-line btn-hiring" href="#join"><span class="dot" aria-hidden="true"></span>We’re hiring</a>
       </div>
       <div class="hero-stats load-up d3">
         <div class="h-stat"><div class="n"><span data-count="10">10</span>+</div><div class="l">years’ experience</div></div>
