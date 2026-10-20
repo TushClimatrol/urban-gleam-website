@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- route-guard:start --><script>(function(){var p=location.pathname;if(p==="/"||p==="/index.html")return;var K=["/services/","/services/domestic-cleaning/","/services/office-cleaning/","/services/end-of-tenancy-cleaning/","/services/after-builders-cleaning/","/services/spring-cleaning/","/services/one-off-cleaning/","/services/after-party-cleaning/","/services/emergency-cleaning/","/services/communal-area-cleaning/","/services/oven-cleaning/","/services/carpet-cleaning/","/services/window-cleaning/","/areas/","/areas/sunbury-on-thames/","/areas/shepperton/","/areas/staines/","/areas/ashford/","/areas/egham/","/areas/chertsey/","/areas/addlestone/","/areas/walton-on-thames/","/areas/weybridge/","/areas/esher/","/areas/molesey/","/areas/epsom/","/areas/kingston/","/areas/surbiton/","/areas/teddington/","/areas/hampton/","/areas/twickenham/","/areas/richmond/","/areas/kew/","/areas/barnes/","/areas/hounslow/","/areas/feltham/","/areas/chiswick/","/areas/ealing/","/areas/hammersmith/","/areas/fulham/","/areas/chelsea/","/areas/putney/","/areas/wimbledon/","/areas/battersea/","/areas/clapham/","/areas/sutton/","/areas/croydon/","/guides/","/guides/cleaning-prices-london-surrey/","/guides/end-of-tenancy-cleaning-checklist/","/privacy/","/legal/"],M={"/about-us":"/","/prices":"/services/#prices","/book-online":"/#book","/contact-us":"/#contact","/testimonials":"/#reviews","/blog":"/","/privacy-policy":"/privacy/","/legal-notice":"/legal/"};var b=p.replace(/\/index\.html$/,"").replace(/\/+$/,"").toLowerCase();var t=K.indexOf(b+"/")>-1?(b+"/"===p?"":b+"/"+location.search+location.hash):M[b];if(t){location.replace(t);return;}var m=document.createElement('meta');m.name='robots';m.content='noindex';document.head.appendChild(m);window.__ugNotFound=1;})();</script><!-- route-guard:end -->
+<!-- route-guard:start --><script>(function(){var p=location.pathname;if(p==="/"||p==="/index.html")return;var K=["/services/","/services/domestic-cleaning/","/services/office-cleaning/","/services/end-of-tenancy-cleaning/","/services/after-builders-cleaning/","/services/spring-cleaning/","/services/one-off-cleaning/","/services/after-party-cleaning/","/services/emergency-cleaning/","/services/communal-area-cleaning/","/services/oven-cleaning/","/services/carpet-cleaning/","/services/window-cleaning/","/areas/","/areas/sunbury-on-thames/","/areas/shepperton/","/areas/staines/","/areas/ashford/","/areas/egham/","/areas/chertsey/","/areas/addlestone/","/areas/walton-on-thames/","/areas/weybridge/","/areas/esher/","/areas/molesey/","/areas/epsom/","/areas/kingston/","/areas/surbiton/","/areas/teddington/","/areas/hampton/","/areas/twickenham/","/areas/richmond/","/areas/kew/","/areas/barnes/","/areas/hounslow/","/areas/feltham/","/areas/chiswick/","/areas/ealing/","/areas/hammersmith/","/areas/fulham/","/areas/chelsea/","/areas/putney/","/areas/wimbledon/","/areas/battersea/","/areas/clapham/","/areas/sutton/","/areas/croydon/","/guides/","/guides/cleaning-prices-london-surrey/","/guides/end-of-tenancy-cleaning-checklist/","/careers/","/privacy/","/legal/"],M={"/about-us":"/","/prices":"/services/#prices","/book-online":"/#book","/contact-us":"/#contact","/testimonials":"/#reviews","/blog":"/","/privacy-policy":"/privacy/","/legal-notice":"/legal/"};var b=p.replace(/\/index\.html$/,"").replace(/\/+$/,"").toLowerCase();var t=K.indexOf(b+"/")>-1?(b+"/"===p?"":b+"/"+location.search+location.hash):M[b];if(t){location.replace(t);return;}var m=document.createElement('meta');m.name='robots';m.content='noindex';document.head.appendChild(m);window.__ugNotFound=1;})();</script><!-- route-guard:end -->
 <title>Urban Gleam | Cleaners in Sunbury-on-Thames, Surrey &amp; SW London</title>
 <meta name="description" content="Vetted, insured eco-friendly cleaners in Sunbury-on-Thames, Surrey &amp; SW London. Domestic cleaning from £22.50/hr, end of tenancy from £130. Rated 5.0 on Google.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -151,7 +151,7 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
 .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
 .nav-links a.active { color: var(--ink); }
 .head-cta { display: flex; align-items: center; gap: 12px; }
-.head-phone { font-size: 13.5px; font-weight: 600; display: flex; gap: 7px; align-items: center; color: var(--ink); }
+.head-phone { font-size: 13.5px; font-weight: 600; display: flex; gap: 7px; align-items: center; color: var(--ink); white-space: nowrap; }
 .head-phone svg { color: var(--pine); }
 .btn-head { padding: 12px 22px; font-size: 12px; }
 .burger { display: none; background: none; border: none; cursor: pointer; width: 44px; height: 44px; }
@@ -611,6 +611,67 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
 .qp-row input { flex: 1 1 0; width: 0; border: none; outline: none; font-family: var(--font-body); font-size: 16px; padding: 8px 16px; background: transparent; min-width: 0; }
 .qp-note { font-size: 11.5px; color: var(--ink-soft); }
 
+/* ---------- join the team ---------- */
+.join-panel {
+  position: relative; overflow: hidden; color: #fff;
+  background: radial-gradient(900px 500px at 85% -10%, rgba(76,175,125,.45), transparent 60%), linear-gradient(135deg, #0E5637, var(--moss) 70%);
+  border-radius: 26px; padding: clamp(36px, 5vw, 60px);
+  display: grid; grid-template-columns: 1.05fr .95fr; gap: 44px; align-items: start;
+}
+.join-panel > * { min-width: 0; position: relative; }
+.join-panel .eyebrow { color: #BDE5CC; }
+.join-panel .eyebrow::before { background: #4CAF7D; }
+.join-panel h2 { font-size: clamp(1.8rem, 3.8vw, 2.6rem); margin-bottom: 16px; color: #fff; }
+.join-panel h2 .accent-g { color: #7FD6A6; }
+.join-panel .join-lead { color: rgba(255,255,255,.78); font-size: 1.02rem; margin-bottom: 26px; max-width: 520px; }
+.join-perks { list-style: none; display: grid; gap: 12px; margin-bottom: 28px; }
+.join-perks li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; color: rgba(255,255,255,.92); }
+.join-perks li svg { flex: none; margin-top: 2px; color: #7FD6A6; }
+.join-perks li strong { color: #fff; }
+.join-ctas { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.join-ctas .btn-line { background: transparent; color: #fff; border-color: rgba(255,255,255,.3); }
+.join-ctas .btn-line:hover { border-color: #fff; color: #fff; }
+.join-ctas .btn-solid { background: #fff; color: var(--pine-deep); }
+.join-ctas .btn-solid:hover { background: #E4EFE7; box-shadow: 0 12px 28px rgba(0,0,0,.25); }
+.join-card { background: #fff; color: var(--ink); border-radius: 22px; padding: 26px; box-shadow: 0 30px 70px rgba(0,0,0,.25); }
+.join-card .jc-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 6px; }
+.join-card .jc-head strong { font-family: var(--font-display); font-size: 1.15rem; }
+.join-card .jc-time { font-size: 12px; font-weight: 600; color: var(--pine-deep); background: var(--mint); border-radius: 999px; padding: 5px 11px; white-space: nowrap; }
+.join-card .jc-sub { color: var(--ink-soft); font-size: 14px; margin-bottom: 18px; }
+.join-open { width: 100%; justify-content: center; font-size: 13px; padding: 15px 22px; }
+.join-card.open .join-open, .join-card.sent .join-open { display: none; }
+.join-form { display: none; gap: 12px; }
+.join-card.open .join-form { display: grid; }
+.join-card.sent .join-form { display: none; }
+.jf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.jf-grid > * { min-width: 0; }
+.join-form input[type="text"], .join-form input[type="tel"], .join-form input[type="email"], .join-form textarea {
+  width: 100%; border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; font-family: var(--font-body); font-size: 16px; background: #fff; color: var(--ink); transition: border-color .25s;
+}
+.join-form input:focus, .join-form textarea:focus { outline: none; border-color: var(--pine); }
+.join-form textarea { resize: vertical; min-height: 72px; }
+.jf-q { font-size: 12.5px; font-weight: 600; color: var(--ink-soft); margin-bottom: 7px; display: block; }
+.jchips { display: flex; flex-wrap: wrap; gap: 7px; }
+.jchip { position: relative; cursor: pointer; }
+.jchip input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.jchip span { display: inline-block; border: 1px solid var(--line); border-radius: 999px; padding: 7px 13px; font-size: 13px; font-weight: 500; color: var(--ink); background: #fff; transition: all .2s; user-select: none; }
+.jchip:hover span { border-color: var(--pine); }
+.jchip input:checked + span { background: var(--mint); border-color: var(--pine); color: var(--pine-deep); font-weight: 600; }
+.jchip input:focus-visible + span { outline: 2px solid var(--pine); outline-offset: 2px; }
+.join-form .btn-solid { width: 100%; justify-content: center; font-size: 13px; padding: 15px 22px; }
+.jf-note { font-size: 11.5px; color: var(--ink-soft); text-align: center; }
+.jf-note a { color: var(--pine-deep); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.join-done { display: none; text-align: center; padding: 10px 0 4px; }
+.join-card.sent .join-done { display: block; }
+.join-done .big { width: 58px; height: 58px; border-radius: 50%; background: var(--mint); color: var(--pine-deep); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 14px; animation: pop .5s var(--ease); }
+@keyframes pop { from { transform: scale(.4); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.join-done strong { display: block; font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 8px; }
+.join-done p { color: var(--ink-soft); font-size: 14px; }
+.hiring-chip { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #fff; background: var(--rose); border-radius: 999px; padding: 4px 10px; margin-left: 8px; vertical-align: middle; }
+.join-aside { position: sticky; top: 100px; }
+@media (max-width: 520px) { .jf-grid { grid-template-columns: 1fr; } .join-card { padding: 20px; } .join-card .jc-head { flex-direction: column; align-items: flex-start; gap: 8px; } }
+.nav-links a .hiring-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--rose); margin-left: 5px; vertical-align: 2px; }
+
 /* ---------- FAQ ---------- */
 .faq-item { border-bottom: 1px solid var(--line); }
 .faq-q {
@@ -693,12 +754,14 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
 
 /* ---------- responsive ---------- */
 @media (max-width: 1080px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } .contact-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 1340px) { .head-phone { display: none; } }
+@media (max-width: 1180px) { .nav-links a { padding: 9px 7px; letter-spacing: .1em; font-size: 11px; } }
 @media (max-width: 960px) {
   .nav-links, .head-phone { display: none; }
   .burger { display: block; }
-  .hero-grid, .eco-grid, .quote-panel, .book-wrap, .sp-grid { grid-template-columns: 1fr; }
+  .hero-grid, .eco-grid, .quote-panel, .join-panel, .book-wrap, .sp-grid { grid-template-columns: 1fr; }
   .hero { padding: 145px 0 80px; }
-  .summary-card, .sp-price-card { position: static; }
+  .summary-card, .sp-price-card, .join-aside { position: static; }
   .section { padding: 80px 0; }
   .rate-row { grid-template-columns: 1.6fr 1fr auto; }
   .rate-row .minc { display: none; }
@@ -733,7 +796,7 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
   .hero h1 .w, .load-up { opacity: 1; transform: none; }
 }
 </style>
-<noscript><style>.fade-head,.rise,.stagger>*{opacity:1;transform:none}.bar i{width:var(--w,100%)}</style></noscript>
+<noscript><style>.fade-head,.rise,.stagger>*{opacity:1;transform:none}.bar i{width:var(--w,100%)}.join-form{display:grid}.join-open{display:none}</style></noscript>
 </head>
 <body>
 <div class="scroll-progress" aria-hidden="true"></div>
@@ -751,6 +814,7 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#gallery">Our work</a></li>
         <li><a href="#areas">Areas</a></li>
+        <li><a href="#join">Join us<span class="hiring-dot" aria-hidden="true"></span></a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -772,6 +836,7 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
   <a href="#reviews">Reviews</a>
   <a href="#gallery">Our work</a>
   <a href="#areas">Areas</a>
+  <a href="#join">Join the team — we’re hiring</a>
   <a href="#contact">Contact</a>
 </div>
 
@@ -1249,6 +1314,85 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
   </div>
 </section>
 
+<!-- ============ JOIN THE TEAM ============ -->
+<section class="section" id="join" style="padding-top:30px">
+  <div class="container">
+    <div class="join-panel rise">
+      <div>
+        <span class="eyebrow">We’re hiring</span>
+        <h2>Looking for cleaners? Come join <span class="accent-g">the team.</span></h2>
+        <p class="join-lead">Urban Gleam is growing across Sunbury-on-Thames, Surrey and South West London, and we need reliable, friendly cleaners who take pride in their work. Part-time or full-time, experienced or keen to learn — if you care about doing a proper job, we’d love to hear from you.</p>
+        <ul class="join-perks">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Flexible hours</strong> — mornings, afternoons, evenings or weekends, around your life</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Local work</strong> — jobs near where you live, with regular customers you get to know</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Everything provided</strong> — eco-friendly products, equipment and full training</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>A team that has your back</strong> — a small, friendly company where your work is noticed</span></li>
+        </ul>
+        <div class="join-ctas">
+          <a class="btn btn-line" href="/careers/">Read the full role</a>
+          <a class="btn btn-line" href="https://wa.me/447942369735?text=Hi%20Urban%20Gleam%2C%20I%27m%20interested%20in%20joining%20the%20team%20as%20a%20cleaner" target="_blank" rel="noopener">Ask on WhatsApp</a>
+        </div>
+      </div>
+      <!-- join-form:start -->
+      <div class="join-card" id="join-card">
+        <div class="jc-head"><strong>Apply to join Urban Gleam</strong><span class="jc-time">Takes about 60 seconds</span></div>
+        <p class="jc-sub">No CV needed. Tell us a little about you and we’ll call you back for a friendly chat.</p>
+        <button class="btn btn-solid join-open" type="button" id="join-open" aria-controls="join-form" aria-expanded="false">Apply now <span class="arr">→</span></button>
+        <form class="join-form" id="join-form" action="https://formsubmit.co/contact@urbangleamcleaning.com" method="POST">
+          <input type="hidden" name="_subject" value="NEW CLEANER APPLICATION — website">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://urbangleamcleaning.com/careers/?applied=1">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="jf-grid">
+            <input type="text" name="Name" id="j-name" placeholder="Your name" aria-label="Your name" autocomplete="name" required>
+            <input type="tel" name="Phone" id="j-phone" placeholder="Mobile number" aria-label="Mobile number" autocomplete="tel" required>
+          </div>
+          <div class="jf-grid">
+            <input type="email" name="Email" id="j-email" placeholder="Email (optional)" aria-label="Email" autocomplete="email">
+            <input type="text" name="Postcode" id="j-postcode" placeholder="Your postcode" aria-label="Your postcode" autocomplete="postal-code" required>
+          </div>
+          <fieldset style="border:none">
+            <legend class="jf-q">Cleaning experience</legend>
+            <div class="jchips">
+              <label class="jchip"><input type="radio" name="Experience" value="None yet — keen to learn"><span>None yet</span></label>
+              <label class="jchip"><input type="radio" name="Experience" value="Under 1 year"><span>Under 1 year</span></label>
+              <label class="jchip"><input type="radio" name="Experience" value="1–3 years" checked><span>1–3 years</span></label>
+              <label class="jchip"><input type="radio" name="Experience" value="3+ years"><span>3+ years</span></label>
+            </div>
+          </fieldset>
+          <fieldset style="border:none">
+            <legend class="jf-q">When can you work? <span style="font-weight:400">(pick all that apply)</span></legend>
+            <div class="jchips">
+              <label class="jchip"><input type="checkbox" name="Availability" value="Weekday mornings" checked><span>Weekday mornings</span></label>
+              <label class="jchip"><input type="checkbox" name="Availability" value="Weekday afternoons"><span>Weekday afternoons</span></label>
+              <label class="jchip"><input type="checkbox" name="Availability" value="Evenings"><span>Evenings</span></label>
+              <label class="jchip"><input type="checkbox" name="Availability" value="Weekends"><span>Weekends</span></label>
+            </div>
+          </fieldset>
+          <fieldset style="border:none">
+            <legend class="jf-q">Do you drive?</legend>
+            <div class="jchips">
+              <label class="jchip"><input type="radio" name="Driver" value="Yes — own car"><span>Yes, own car</span></label>
+              <label class="jchip"><input type="radio" name="Driver" value="Licence, no car"><span>Licence, no car</span></label>
+              <label class="jchip"><input type="radio" name="Driver" value="No" checked><span>No</span></label>
+            </div>
+          </fieldset>
+          <textarea name="Message" id="j-message" placeholder="Anything else? e.g. the areas you can reach, hours you’d like, languages you speak" aria-label="Anything else"></textarea>
+          <button class="btn btn-solid" type="submit">Send my application <span class="arr">→</span></button>
+          <p class="jf-note">You must have the right to work in the UK. We’ll only use your details to contact you about this role — see our <a href="/privacy/">privacy policy</a>.</p>
+        </form>
+        <div class="join-done" aria-live="polite">
+          <span class="big"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <strong>Thanks — we’ve got your application!</strong>
+          <p>We’ll call or message you within two working days to arrange a quick chat. Can’t wait? <a href="tel:+447942369735" style="color:var(--pine-deep);font-weight:600;text-decoration:underline">Call 07942 369735</a>.</p>
+        </div>
+      </div>
+      <!-- join-form:end -->
+    </div>
+  </div>
+</section>
+
 <!-- ============ QUOTE PANEL ============ -->
 <section class="section" style="padding-top:30px">
   <div class="container">
@@ -1369,6 +1513,7 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
           <li><a href="#gallery">Our work</a></li>
           <li><a href="/areas/">Areas we cover</a></li>
           <li><a href="/guides/">Guides &amp; prices</a></li>
+          <li><a href="/careers/">Careers — we’re hiring</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -1644,6 +1789,52 @@ h3, h4, h5 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0
     }
     btn.disabled = false; btn.textContent = prev;
   });
+
+  /* join-form-js:start — self-contained: also inlined on /careers/ by tools/build-seo.py */
+  (function () {
+    var card = document.getElementById('join-card'), form = document.getElementById('join-form'), open = document.getElementById('join-open');
+    if (!card || !form) return;
+    var say = function (m) { if (window.ugToast) window.ugToast(m); };
+    var expand = function () { card.classList.remove('sent'); card.classList.add('open'); if (open) open.setAttribute('aria-expanded', 'true'); var f = form.querySelector('input[type="text"]'); if (f) setTimeout(function () { f.focus({ preventScroll: true }); }, 350); };
+    if (open) open.addEventListener('click', expand);
+    /* /#apply and ?applied=1 deep links */
+    var deep = function () {
+      if (/#apply$/.test(location.hash) || /[?&]applied=1/.test(location.search)) {
+        if (/applied=1/.test(location.search)) card.classList.add('sent'); else expand();
+        setTimeout(function () { card.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 200);
+      }
+    };
+    deep(); window.addEventListener('hashchange', deep);
+    form.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var name = form.querySelector('[name="Name"]'), phone = form.querySelector('[name="Phone"]'), pc = form.querySelector('[name="Postcode"]');
+      if (!name.value.trim() || !phone.value.trim() || !pc.value.trim()) { say('Please add your name, number and postcode'); return; }
+      if (!/^[+\d][\d\s()+-]{8,}$/.test(phone.value.trim())) { phone.focus(); say('Please check your phone number'); return; }
+      if (form.querySelector('[name="_honey"]').value) return;
+      var btn = form.querySelector('button[type="submit"]'), prev = btn.innerHTML;
+      btn.disabled = true; btn.textContent = 'Sending…';
+      var data = {}, fd = new FormData(form);
+      fd.forEach(function (v, k) { if (k === '_honey' || k === '_next') return; data[k] = data[k] ? data[k] + ', ' + v : v; });
+      data.Availability = data.Availability || 'Not stated';
+      data._subject = 'NEW CLEANER APPLICATION — ' + name.value.trim() + ' (' + pc.value.trim().toUpperCase() + ')';
+      data.Page = location.href.split('?')[0];
+      var done = function () { card.classList.add('sent'); card.classList.remove('open'); form.reset(); card.scrollIntoView({ behavior: 'smooth', block: 'center' }); };
+      var ctl = new AbortController(), t = setTimeout(function () { ctl.abort(); }, 15000);
+      fetch('https://formsubmit.co/ajax/contact@urbangleamcleaning.com', {
+        method: 'POST', signal: ctl.signal,
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      }).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+        .then(done)
+        .catch(function () {
+          var body = Object.keys(data).filter(function (k) { return k[0] !== '_'; }).map(function (k) { return k + ': ' + data[k]; }).join('\n');
+          location.href = 'mailto:contact@urbangleamcleaning.com?subject=' + encodeURIComponent(data._subject) + '&body=' + encodeURIComponent(body);
+          say('Opening your email app…');
+        })
+        .finally(function () { clearTimeout(t); btn.disabled = false; btn.innerHTML = prev; });
+    });
+  })();
+  /* join-form-js:end */
 
   /* FAQ (delegated so service pages work too) */
   function wireFaq(root) {

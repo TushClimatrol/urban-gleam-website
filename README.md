@@ -34,6 +34,10 @@ python3 tools/optimise-images.py
 - **Opening hours** appear in `index.html` (`OPEN_HOUR` / `CLOSE_HOUR`, the contact card, the footer) and in `BIZ`
   in `tools/build-seo.py`. Change all of them together, and keep the Google Business Profile the same.
 - **The `<!-- name:start -->…<!-- name:end -->` markers** in `index.html` are filled in by the build. Don't remove them.
+- **Hiring.** The "Join the team" section (`#join`) and its application card are written once in `index.html`
+  (`join-form` and `join-form-js` markers) and copied onto `/careers/` by the build, so edit them there. The role text,
+  FAQs and the Google-for-Jobs `JobPosting` data live in `CAREERS` in `tools/build-seo.py`. Applications are emailed
+  to `contact@` through FormSubmit like bookings; `/#apply` opens the form, `/careers/?applied=1` shows the thank-you.
 - **`google-site-verification`** in the `<head>` of `index.html` proves ownership to Google Search Console. Don't remove it.
 - **Addresses.** Render answers unknown addresses with `index.html`; the small script at the top of its `<head>` then
   sends `/areas/kingston` to `/areas/kingston/`, sends old-site addresses to their new home, and marks anything else

@@ -361,7 +361,7 @@ h = replace_block(h, 'seo', '\n' + seo_head(SITE + '/', HOME['title'], HOME['des
 
 # every real page, for the address check below (index.html is also what the host serves for unknown addresses)
 PAGE_PATHS = (['/services/'] + [f'/services/{slug}/' for slug, _, _, _ in SERVICE_META] +
-              ['/areas/'] + [f'/areas/{s}/' for s in AREAS] + ['/guides/'] + [f'/guides/{g["slug"]}/' for g in GUIDES] + ['/privacy/', '/legal/'])
+              ['/areas/'] + [f'/areas/{s}/' for s in AREAS] + ['/guides/'] + [f'/guides/{g["slug"]}/' for g in GUIDES] + ['/careers/', '/privacy/', '/legal/'])
 def guard_js(not_found_flag):
     """Runs before anything else. The host answers unknown addresses with this page, so:
        /areas/kingston -> /areas/kingston/ ; old-site addresses -> their new home ; anything else is
@@ -528,16 +528,19 @@ write('assets/site.css', css)
 # ====================================================================== 5. page shell
 header_html = re.search(r'(<div class="scroll-progress".*?</div>\n\n)<main', h, flags=re.S).group(1)
 footer_html = re.search(r'(<!-- ============ FOOTER ============ -->.*?</a>\n)<script>', h, flags=re.S).group(1)
-NAV_TARGET = {'': '/', 'top': '/', 'services': '/services/', 'areas': '/areas/', 'prices': '/services/#prices'}
+NAV_TARGET = {'': '/', 'top': '/', 'services': '/services/', 'areas': '/areas/', 'prices': '/services/#prices', 'join': '/careers/'}
 def absolutise(frag):
     """Homepage section links (#services ...) become real addresses on the generated pages."""
     frag = re.sub(r'href="#(?!/)([a-z]*)"', lambda m: f'href="{NAV_TARGET.get(m.group(1), "/#" + m.group(1))}"', frag)
     return frag.replace('href="#/privacy"', 'href="/privacy/"').replace('href="#/legal"', 'href="/legal/"')
 header_html, footer_html = absolutise(header_html), absolutise(footer_html)
+# the application card + its script live in index.html (join-form markers) and are reused on /careers/
+join_card_html = re.search(r'<!-- join-form:start -->\n(.*?)<!-- join-form:end -->', h, flags=re.S).group(1)
+join_form_js = re.search(r'/\* join-form-js:start[^\n]*\n(.*?)/\* join-form-js:end \*/', h, flags=re.S).group(1)
 
 def header_for(section):
     if not section: return header_html
-    target = {'services': '/services/', 'areas': '/areas/'}[section]
+    target = {'services': '/services/', 'areas': '/areas/', 'careers': '/careers/'}[section]
     return header_html.replace(f'<li><a href="{target}">', f'<li><a class="active" aria-current="page" href="{target}">', 1)
 
 page_js = '''<script>
@@ -1002,6 +1005,98 @@ body = f'''<section class="sp-hero"><div class="container">
 <div class="container"><div class="guide-cards">{''.join(guide_index_cards)}</div></div>'''
 emit('guides/index.html', url, shell(url, 'Cleaning Guides: Prices, Checklists & Advice | Urban Gleam',
      'Guides from Urban Gleam: 2026 cleaning prices in London & Surrey, the end of tenancy cleaning checklist letting agents use, and how to compare cleaning quotes.', body, [c_ld], 'services'))
+
+# ====================================================================== 8c. careers (job page + Google for Jobs structured data)
+CAREERS = {
+    'title': 'Cleaner Jobs in Sunbury-on-Thames, Surrey & SW London | Urban Gleam',
+    'desc': 'Cleaner jobs with Urban Gleam in Sunbury-on-Thames, Surrey & SW London. Flexible part-time or full-time hours, training and products provided. Apply in 60 seconds.',
+    'job_title': 'Cleaner — domestic & commercial (part-time or full-time)',
+    'offer': [
+        ('Flexible hours', 'Part-time or full-time. Tell us the mornings, afternoons, evenings or weekends you can do and we build your rota around them.'),
+        ('Work close to home', 'Our jobs are in Sunbury, Shepperton, Staines, Walton, Kingston, Twickenham, Richmond and across SW London — we match you to your area.'),
+        ('Regular customers', 'Weekly and fortnightly homes mean the same addresses and friendly faces, not a different stranger every day.'),
+        ('Everything provided', 'Eco-friendly, non-toxic products, HEPA vacuums and equipment are supplied, so you never pay for kit.'),
+        ('Paid training', 'Full training on our methods, the end of tenancy checklist and safe product use — experienced or not.'),
+        ('A small, friendly team', 'You deal with the owners directly. Good work is noticed and there is room to take on more hours or lead jobs.'),
+    ],
+    'need': [
+        'Reliable and punctual — our customers book slots and count on us turning up',
+        'Takes pride in a proper, thorough clean and an eye for detail',
+        'Friendly, polite and trustworthy in people’s homes and workplaces',
+        'Right to work in the UK, and happy for us to take references and run a background check',
+        'Good enough English to understand job notes and chat with customers',
+        'Driving licence and your own car are a bonus (more jobs, more hours), not essential',
+    ],
+    'steps': [
+        ('Apply', 'Fill in the 60-second form on this page — no CV needed.'),
+        ('Quick chat', 'We call or message you within two working days for a friendly phone chat.'),
+        ('Meet & trial', 'Meet the team in Sunbury-on-Thames, then do a paid trial clean alongside one of our experienced cleaners.'),
+        ('Start', 'References and checks done, you get your first regular jobs and a rota that fits.'),
+    ],
+    'faqs': [
+        ('Do I need experience to apply?', 'No. Experienced cleaners can start straight away; if you are new to cleaning we train you fully, and your first jobs are alongside an experienced team member.'),
+        ('What hours can I work?', 'Whatever suits you — we have customers from 7am to 8pm, seven days a week. Many of our cleaners do school-hours shifts; others work evenings and weekends around another job.'),
+        ('Where are the jobs?', 'We are based in Sunbury-on-Thames and cover Spelthorne, Elmbridge, Kingston, Richmond, Hounslow and South West London. We give you work close to where you live.'),
+        ('Do I need my own products or car?', 'No. We supply all eco-friendly products and equipment. A car helps you reach more jobs but plenty of our work is reachable by bus or train.'),
+        ('How much is the pay?', 'We pay competitive hourly rates, with more for end of tenancy, after builders and specialist cleans. We confirm the exact rate for your hours and experience at the phone chat.'),
+        ('What checks do you do?', 'Every Urban Gleam cleaner is reference-checked and background-checked before working alone in a customer’s home, because that is what we promise our customers.'),
+    ],
+}
+url = SITE + '/careers/'
+c_html, c_ld = crumbs([('Home', '/'), ('Careers', '/careers/')])
+posted = LM_PREVIEW.get(url, {}).get('lastmod', TODAY)
+job_ld = {
+    "@context": "https://schema.org", "@type": "JobPosting", "@id": url + '#job',
+    "title": CAREERS['job_title'], "url": url, "datePosted": posted,
+    "validThrough": date.fromordinal(date.fromisoformat(posted).toordinal() + 120).isoformat() + 'T23:59',
+    "description": '<p>' + '</p><p>'.join([
+        'Urban Gleam Ltd, a 5-star rated eco-friendly cleaning company based in Sunbury-on-Thames, is hiring reliable domestic and commercial cleaners across Surrey and South West London.',
+        'The work: regular weekly and fortnightly home cleans, office and communal area cleaning, end of tenancy and after builders deep cleans, oven, carpet and window cleaning. All products, equipment and training are provided.',
+        'Hours: flexible part-time or full-time, between 7am and 8pm, seven days a week. You tell us when you can work and we build your rota around it, with jobs close to where you live.',
+        'You: reliable, punctual, thorough and friendly, with the right to work in the UK. Experience is welcome but not essential. A driving licence and car are a bonus.',
+        'Pay: competitive hourly rates, with higher rates for deep, end of tenancy and specialist cleans. Apply in 60 seconds at ' + url + ' — no CV needed.']) + '</p>',
+    "employmentType": ["PART_TIME", "FULL_TIME"],
+    "hiringOrganization": {"@type": "Organization", "name": BIZ['name'], "sameAs": SITE + '/', "logo": f"{SITE}/favicon-512.png"},
+    "jobLocation": {"@type": "Place", "address": {"@type": "PostalAddress", "streetAddress": BIZ['street'], "addressLocality": BIZ['town'],
+                     "addressRegion": BIZ['county'], "postalCode": BIZ['postcode'], "addressCountry": "GB"}},
+    "industry": "Cleaning services", "occupationalCategory": "Cleaner",
+    "directApply": True, "jobLocationType": None,
+}
+job_ld = {k: v for k, v in job_ld.items() if v is not None}
+inc_html = ''.join(f'<div class="sp-inc">{tick}<span><strong>{esc(t)}</strong> — {amp(d)}</span></div>' for t, d in CAREERS['offer'])
+need_html = ''.join(f'<div class="sp-inc">{tick}<span>{amp(n)}</span></div>' for n in CAREERS['need'])
+steps_html = ''.join(f'<div class="sp-inc"><span style="flex:none;width:26px;height:26px;border-radius:50%;background:var(--pine);color:#fff;font-weight:700;font-size:13px;display:inline-flex;align-items:center;justify-content:center">{i}</span><span><strong>{esc(t)}</strong> — {amp(d)}</span></div>' for i, (t, d) in enumerate(CAREERS['steps'], 1))
+body = f'''<section class="sp-hero"><div class="container">
+{c_html}
+<span class="eyebrow" style="display:flex">We’re hiring</span>
+<h1>Looking for cleaners? Come join <span class="accent-g">the team.</span></h1>
+<p class="sp-tag">Urban Gleam is growing across Sunbury-on-Thames, Surrey and South West London, and we need reliable, friendly cleaners who take pride in their work. Part-time or full-time, experienced or keen to learn.</p>
+<div class="nf-links" style="margin-top:24px"><a class="btn btn-solid" href="#join-card">Apply in 60 seconds</a><a class="btn btn-line" href="{esc(wa_link('Hi Urban Gleam, I’m interested in joining the team as a cleaner'))}" target="_blank" rel="noopener">Ask on WhatsApp</a></div>
+</div></section>
+<div class="container sp-grid">
+<div class="sp-body">
+<h2 class="sp-h" style="margin-top:0">The role</h2>
+<p><strong>{esc(CAREERS['job_title'])}.</strong> Regular weekly and fortnightly home cleans, office and communal area cleaning, plus end of tenancy, after builders, oven, carpet and window cleans for those who want them. You work in customers’ homes and workplaces across our area, either on your own once trained or in a pair for the bigger jobs.</p>
+<p>We are a small Sunbury-on-Thames company, rated 5.0 on Google by our customers, and the people you’d be cleaning for are mostly families, landlords, letting agents and local businesses who have used us for years. We take on cleaners who care about doing it properly — because that is why those customers keep coming back.</p>
+<h2 class="sp-h">What we offer</h2>
+<div class="sp-includes">{inc_html}</div>
+<h2 class="sp-h">What we’re looking for</h2>
+<div class="sp-includes">{need_html}</div>
+<h2 class="sp-h">How it works</h2>
+<div class="sp-includes">{steps_html}</div>
+<div class="sp-note">Prefer to talk first? Call <a href="tel:{BIZ['phone_e164']}">{BIZ['phone_display']}</a>, <a href="{esc(wa_link('Hi Urban Gleam, I’m interested in joining the team as a cleaner'))}" target="_blank" rel="noopener">message us on WhatsApp</a> or email <a href="mailto:{BIZ['email']}?subject=Cleaner%20application">{BIZ['email']}</a> with “Cleaner application” in the subject.</div>
+<h2 class="sp-h">Questions about working with us</h2>
+{faq_html(CAREERS['faqs'])}
+</div>
+<aside class="join-aside" aria-label="Apply to join the team">
+{join_card_html}</aside>
+</div>
+<script>
+(function () {{
+{join_form_js}
+}})();
+</script>'''
+emit('careers/index.html', url, shell(url, CAREERS['title'], CAREERS['desc'], body, [job_ld, c_ld, ld_faq(CAREERS['faqs'])], 'careers'))
 
 body = f'''<section class="sp-hero" style="padding-bottom:110px"><div class="container">
 <span class="eyebrow" style="display:flex">Page not found</span>
